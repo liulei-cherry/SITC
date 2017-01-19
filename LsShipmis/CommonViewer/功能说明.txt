@@ -1,0 +1,15 @@
+本模块的主要功能是:提供所有显示单元的基类,为以后的系统建设打造显示层的基石.
+本模块不包含任何实际业务功能,所有的元素力求通用,实用,无bug;
+
+其中BaseControl中主要是集合了各种再次封装的窗体组件.这些组件往往都是页面上的最小元素.
+如:下拉框=ComboxEx 时间元素=DataTimerPickerEx 文本框=TextBoxEx
+  UcDataGridView 是 原DataCridView的重写版本
+  UcOjbectsGridView 是再次使用UcDataGridView的专门用于某继承与CommonObject类的
+  对象集合的显示列表
+  
+
+BaseForm目录中主要是各种可能被调用的窗口的基类
+  FrmBaseSelectValue:所有选择元素(ComboxEx使用的窗体)必须继承这个窗体.并实现其委托
+  FrmInputBoxGrid:查找时输入框
+
+Resource目录中是所有的资源

@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B110A0E-5B6F-4FF7-AAB1-D4DC8656DAD5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSShipMis_Ship</RootNamespace>
+    <AssemblyName>LSShipMis_Ship</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>sys.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ManifestCertificateThumbprint>D9A05343A7945020F9E301EB9E29E3247BB6C7D3</ManifestCertificateThumbprint>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+    <SignManifests>false</SignManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>\\192.168.1.12\ShipMis\donghai\LSShipMis_Ship_111\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>陆海船舶管理系统—船舶版</ProductName>
+    <PublisherName>大连陆海科技有限公司</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.4</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicData\BaseDataService.cs" />
+    <Compile Include="Common\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Classes\CommonOpt.cs" />
+    <Compile Include="Common\PeriodValidity\IValidTime.cs" />
+    <Compile Include="Common\Remind\RemindManager.cs" />
+    <Compile Include="FrmMdiMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMdiMain.Designer.cs">
+      <DependentUpon>FrmMdiMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Common\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMdiMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMdiMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seaman\Forms\FrmSeamanInfo.resx">
+      <DependentUpon>FrmSeamanInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysLs\Forms\AdminReLogin.resx">
+      <DependentUpon>AdminReLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysLs\Forms\FrmAddSysUser.resx">
+      <DependentUpon>FrmAddSysUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysLs\Forms\FrmEditPwd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmEditPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysLs\Forms\FrmRightSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmRightSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysLs\Forms\FrmShipUserHead.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmShipUserHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysLs\Forms\FrmSysUser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSysUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Seaman\Forms\FrmSeamanInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seaman\Forms\FrmSeamanInfo.designer.cs">
+      <DependentUpon>FrmSeamanInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seaman\Services\SeamanOpt.cs" />
+    <Compile Include="Seaman\Services\SeamanService.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SysLs\BusinessClasses\T_SYS_USER.cs" />
+    <Compile Include="SysLs\Forms\AdminReLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysLs\Forms\AdminReLogin.Designer.cs">
+      <DependentUpon>AdminReLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysLs\Forms\FrmAddSysUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysLs\Forms\FrmAddSysUser.designer.cs">
+      <DependentUpon>FrmAddSysUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysLs\Forms\FrmEditPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysLs\Forms\FrmEditPwd.Designer.cs">
+      <DependentUpon>FrmEditPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysLs\Forms\FrmRightSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysLs\Forms\FrmRightSet.Designer.cs">
+      <DependentUpon>FrmRightSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysLs\Forms\FrmShipUserHead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysLs\Forms\FrmShipUserHead.Designer.cs">
+      <DependentUpon>FrmShipUserHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysLs\Forms\FrmSysUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysLs\Forms\FrmSysUser.Designer.cs">
+      <DependentUpon>FrmSysUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysLs\Services\RoleRight.cs" />
+    <Compile Include="SysLs\Services\T_SYS_USERService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="back.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="changeDetail.txt" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\affirm.png">
+    </None>
+    <None Include="Resources\close.png">
+    </None>
+    <None Include="Resources\copy.png">
+    </None>
+    <None Include="Resources\delete.png">
+    </None>
+    <None Include="Resources\help.png">
+    </None>
+    <None Include="Resources\new.png">
+    </None>
+    <None Include="Resources\open.png">
+    </None>
+    <None Include="Resources\print.png">
+    </None>
+    <None Include="Resources\retrieve.png">
+    </None>
+    <None Include="Resources\save.png">
+    </None>
+    <None Include="Resources\fileunbound.png">
+    </None>
+    <None Include="Resources\filebound.png">
+    </None>
+    <None Include="Resources\rightstop.png">
+    </None>
+    <None Include="sys.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\close.bmp" />
+    <None Include="Resources\right.bmp" />
+    <None Include="Resources\AMBER.png" />
+    <None Include="Resources\RED.png" />
+    <None Include="Resources\YELLOW.png" />
+    <Content Include="ShipLogin.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="what%27snew.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\search.bmp">
+    </None>
+    <None Include="Resources\why.bmp">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="BusinessObjects.CrystalReports.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>Crystal Reports for .NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.8.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2008 报表查看器</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseInfo\BaseInfo.csproj">
+      <Project>{71f49ce3-707d-409d-9796-48743be13003}</Project>
+      <Name>BaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMSManage\CMSManage.csproj">
+      <Project>{c60cf8f1-a150-4161-b40d-4bdcbb6c2a43}</Project>
+      <Name>CMSManage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{ee9387af-7aed-494c-b8d0-49b1c89132a6}</Project>
+      <Name>CommonOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonViewer\CommonViewer.csproj">
+      <Project>{0aeb1fbc-6588-4ef9-8a44-a87597e71822}</Project>
+      <Name>CommonViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cost\Cost.csproj">
+      <Project>{a5a38561-8a4d-41d3-91ed-ab66f2501a84}</Project>
+      <Name>Cost</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomerTable\CustomerTable.csproj">
+      <Project>{29054537-a964-4e7e-841b-63fb4f649cea}</Project>
+      <Name>CustomerTable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperationBase\FileOperationBase.csproj">
+      <Project>{e7c6132d-8312-4579-a384-2fcdb6c64e8c}</Project>
+      <Name>FileOperationBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperation\FileOperation.csproj">
+      <Project>{507f1a26-a810-448d-b49b-97d68d7b6eac}</Project>
+      <Name>FileOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemsManage\ItemsManage.csproj">
+      <Project>{982fe57c-67b8-49e3-b7d0-a31b869c7584}</Project>
+      <Name>ItemsManage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Maintenance\Maintenance.csproj">
+      <Project>{4b1a8c51-9639-4461-bc21-0ca009c4585d}</Project>
+      <Name>Maintenance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\oil\Oil.csproj">
+      <Project>{5256114f-d96d-4fa5-ad34-16d9d120c0e1}</Project>
+      <Name>Oil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repair\Repair.csproj">
+      <Project>{064b585d-f342-458b-b83e-007a87158e63}</Project>
+      <Name>Repair</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeaChartManage\SeaChartManage.csproj">
+      <Project>{c2cca66c-4563-4e3a-ae91-2944c4cb4591}</Project>
+      <Name>SeaChartManage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShipCertification\ShipCertification.csproj">
+      <Project>{bf7c2704-bdfc-498e-9de2-858b63f044c2}</Project>
+      <Name>ShipCertification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StorageManage\StorageManage.csproj">
+      <Project>{25ad1c38-d42c-4061-88d9-cecb92f36b9c}</Project>
+      <Name>StorageManage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SynchDll\SynchDll.csproj">
+      <Project>{a23bb6fa-2aa9-4a46-a85b-16b3ce98057e}</Project>
+      <Name>SynchDll</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

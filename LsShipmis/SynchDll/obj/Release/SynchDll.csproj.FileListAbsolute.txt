@@ -1,0 +1,16 @@
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\bin\Release\Translate.xml
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\bin\Release\SYS.ico
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\bin\Release\SynchDll.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\bin\Release\SynchDll.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\bin\Release\CommonOperation.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\bin\Release\CommonViewer.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\bin\Release\OfficeOperation.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\bin\Release\CommonOperation.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\bin\Release\CommonViewer.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\bin\Release\OfficeOperation.xml
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\obj\Release\SynchDll.FrmEditTableInfo.resources
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\obj\Release\SynchDll.FrmLogRecord.resources
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\obj\Release\SynchDll.FrmSynchLog.resources
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\obj\Release\SynchDll.csproj.GenerateResource.Cache
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\obj\Release\SynchDll.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\SynchDll\obj\Release\SynchDll.pdb

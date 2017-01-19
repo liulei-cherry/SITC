@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B1A8C51-9639-4461-BC21-0CA009C4585D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Maintenance</RootNamespace>
+    <AssemblyName>Maintenance</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/Maintenance/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OfficeOperation, Version=1.2.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllLibrary\ViewControlDll\OfficeOperation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alert\WorkOrderAlert.cs" />
+    <Compile Include="Alert\WorkOrderConfirmAlert.cs" />
+    <Compile Include="Alert\WorkOrderSpareNotEnoughAlert.cs" />
+    <Compile Include="DataObject\Gauge.cs" />
+    <Compile Include="DataObject\GaugeLog.cs" />
+    <Compile Include="DataObject\T_TOOL_WORKINFO.cs" />
+    <Compile Include="DataObject\T_TOOL_WORKINFO_COLUMN_MAP.cs" />
+    <Compile Include="DataObject\T_WORKINFO_HISTORY_OUT.cs" />
+    <Compile Include="DataObject\T_WORKINFO_TEMPLATE_CLASS.cs" />
+    <Compile Include="DataObject\T_WORKINFO_TEMPLET.cs" />
+    <Compile Include="DataObject\WorkInfo.cs" />
+    <Compile Include="DataObject\WorkInfoTemplate.cs" />
+    <Compile Include="DataObject\WorkOrder.cs" />
+    <Compile Include="MaintenanceConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmPlanMonthFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmPlanMonthFinish.Designer.cs">
+      <DependentUpon>FrmPlanMonthFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CMSCheckingService.cs" />
+    <Compile Include="Services\GaugeLogService.cs" />
+    <Compile Include="Services\GaugeService.cs" />
+    <Compile Include="Services\ModelHelper.cs" />
+    <Compile Include="Services\PmsAnnualPlanAccess.cs" />
+    <Compile Include="Services\T_TOOL_WORKINFOService.cs" />
+    <Compile Include="Services\T_TOOL_WORKINFO_COLUMN_MAPService.cs" />
+    <Compile Include="Services\T_WORKINFO_HISTORY_OUTService.cs" />
+    <Compile Include="Services\T_WORKINFO_HISTORY_OUTServiceEx.cs" />
+    <Compile Include="Services\T_WORKINFO_TEMPLATE_CLASSService.cs" />
+    <Compile Include="Services\T_WORKINFO_TEMPLETService.cs" />
+    <Compile Include="Services\WorkInfoPlan.cs" />
+    <Compile Include="Services\WorkInfoService.cs" />
+    <Compile Include="Services\WorkInfoServiceMoreOnlyOldPart.cs" />
+    <Compile Include="Services\WorkInfoTemplateService.cs" />
+    <Compile Include="Services\WorkOrderService.cs" />
+    <Compile Include="Services\WorkOrderServiceMore.cs" />
+    <Compile Include="Services\T_WORKINFO_TEMPLATE_CLASSServiceEx.cs" />
+    <Compile Include="Services\T_WORKINFO_TEMPLETServiceEx.cs" />
+    <Compile Include="Services\T_TOOL_WORKINFOServiceEX.cs" />
+    <Compile Include="Viewer\FrmPmsAnnualPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmPmsAnnualPlan.Designer.cs">
+      <DependentUpon>FrmPmsAnnualPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmComponentWorkList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmComponentWorkList.Designer.cs">
+      <DependentUpon>FrmComponentWorkList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOneWorkOrderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOneWorkOrderView.Designer.cs">
+      <DependentUpon>FrmOneWorkOrderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmPmsAnnualPlanAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmPmsAnnualPlanAdjustment.designer.cs">
+      <DependentUpon>FrmPmsAnnualPlanAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmPmsAnnualPlanFirstArrange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmPmsAnnualPlanFirstArrange.designer.cs">
+      <DependentUpon>FrmPmsAnnualPlanFirstArrange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectNotFinishedWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectNotFinishedWorkOrder.designer.cs">
+      <DependentUpon>FrmSelectNotFinishedWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmToolWorkInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmToolWorkInfo.designer.cs">
+      <DependentUpon>FrmToolWorkInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkinfoTempletClassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkinfoTempletClassEdit.Designer.cs">
+      <DependentUpon>FrmWorkinfoTempletClassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkinfoTempletClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkinfoTempletClass.designer.cs">
+      <DependentUpon>FrmWorkinfoTempletClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentHistory.Designer.cs">
+      <DependentUpon>FrmEquipmentHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentWorkInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentWorkInfo.Designer.cs">
+      <DependentUpon>FrmEquipmentWorkInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentWorkInfoAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentWorkInfoAddEdit.Designer.cs">
+      <DependentUpon>FrmEquipmentWorkInfoAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmFinishedWorkOrderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmFinishedWorkOrderView.Designer.cs">
+      <DependentUpon>FrmFinishedWorkOrderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmGauge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmGauge.Designer.cs">
+      <DependentUpon>FrmGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmIncreaseGauge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmIncreaseGauge.Designer.cs">
+      <DependentUpon>FrmIncreaseGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMeasureReportTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMeasureReportTemplate.Designer.cs">
+      <DependentUpon>FrmMeasureReportTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmQuicklyInsertEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmQuicklyInsertEquipment.Designer.cs">
+      <DependentUpon>FrmQuicklyInsertEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmReplacedWorkView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmReplacedWorkView.designer.cs">
+      <DependentUpon>FrmReplacedWorkView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmReplaceWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmReplaceWork.Designer.cs">
+      <DependentUpon>FrmReplaceWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSetGaugeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSetGaugeType.Designer.cs">
+      <DependentUpon>FrmSetGaugeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmTaskDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmTaskDetail.designer.cs">
+      <DependentUpon>FrmTaskDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmTimingCompFirstVal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmTimingCompFirstVal.Designer.cs">
+      <DependentUpon>FrmTimingCompFirstVal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmTimingCompGrpSel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmTimingCompGrpSel.Designer.cs">
+      <DependentUpon>FrmTimingCompGrpSel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmTimingCompInit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmTimingCompInit.designer.cs">
+      <DependentUpon>FrmTimingCompInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmTotalGauge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmTotalGauge.Designer.cs">
+      <DependentUpon>FrmTotalGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkInfo.Designer.cs">
+      <DependentUpon>FrmWorkInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkInfoFirstArrange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkInfoFirstArrange.Designer.cs">
+      <DependentUpon>FrmWorkInfoFirstArrange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkInfoSpare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkInfoSpare.Designer.cs">
+      <DependentUpon>FrmWorkInfoSpare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderCancel.Designer.cs">
+      <DependentUpon>FrmWorkOrderCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderFinish.designer.cs">
+      <DependentUpon>FrmWorkOrderFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderHistory.Designer.cs">
+      <DependentUpon>FrmWorkOrderHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderMeaRptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderMeaRptView.Designer.cs">
+      <DependentUpon>FrmWorkOrderMeaRptView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderMeasureReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderMeasureReport.Designer.cs">
+      <DependentUpon>FrmWorkOrderMeasureReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderNewEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderNewEdit.Designer.cs">
+      <DependentUpon>FrmWorkOrderNewEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderNoPer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderNoPer.Designer.cs">
+      <DependentUpon>FrmWorkOrderNoPer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderSpConsume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderSpConsume.Designer.cs">
+      <DependentUpon>FrmWorkOrderSpConsume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderTempAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderTempAdd.Designer.cs">
+      <DependentUpon>FrmWorkOrderTempAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderToOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderToOther.Designer.cs">
+      <DependentUpon>FrmWorkOrderToOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderTrace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderTrace.Designer.cs">
+      <DependentUpon>FrmWorkOrderTrace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderTraceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkOrderTraceEdit.Designer.cs">
+      <DependentUpon>FrmWorkOrderTraceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcWorkInfoBriefDescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcWorkInfoBriefDescription.Designer.cs">
+      <DependentUpon>UcWorkInfoBriefDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcWorkInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcWorkInfo.designer.cs">
+      <DependentUpon>UcWorkInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcWorkInfoNotEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcWorkInfoNotEdit.designer.cs">
+      <DependentUpon>UcWorkInfoNotEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcWorkOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcWorkOrder.Designer.cs">
+      <DependentUpon>UcWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkTemplet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWorkTemplet.designer.cs">
+      <DependentUpon>FrmWorkTemplet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectWorkTemplet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectWorkTemplet.designer.cs">
+      <DependentUpon>FrmSelectWorkTemplet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmToolWorkInfoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmToolWorkInfoMain.designer.cs">
+      <DependentUpon>FrmToolWorkInfoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmToolWorkInfoUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmToolWorkInfoUnit.designer.cs">
+      <DependentUpon>FrmToolWorkInfoUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmToolWorkInfoPH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmToolWorkInfoPH.designer.cs">
+      <DependentUpon>FrmToolWorkInfoPH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmQuicklyInsertEquipmentNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmQuicklyInsertEquipmentNew.Designer.cs">
+      <DependentUpon>FrmQuicklyInsertEquipmentNew.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseInfo\BaseInfo.csproj">
+      <Project>{71F49CE3-707D-409D-9796-48743BE13003}</Project>
+      <Name>BaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</Project>
+      <Name>CommonOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonViewer\CommonViewer.csproj">
+      <Project>{0AEB1FBC-6588-4EF9-8A44-A87597E71822}</Project>
+      <Name>CommonViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperationBase\FileOperationBase.csproj">
+      <Project>{E7C6132D-8312-4579-A384-2FCDB6C64E8C}</Project>
+      <Name>FileOperationBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperation\FileOperation.csproj">
+      <Project>{507F1A26-A810-448D-B49B-97D68D7B6EAC}</Project>
+      <Name>FileOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemsManage\ItemsManage.csproj">
+      <Project>{982FE57C-67B8-49E3-B7D0-A31B869C7584}</Project>
+      <Name>ItemsManage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StorageManage\StorageManage.csproj">
+      <Project>{25AD1C38-D42C-4061-88D9-CECB92F36B9C}</Project>
+      <Name>StorageManage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmPlanMonthFinish.resx">
+      <DependentUpon>FrmPlanMonthFinish.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmPmsAnnualPlan.resx">
+      <DependentUpon>FrmPmsAnnualPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmComponentWorkList.resx">
+      <DependentUpon>FrmComponentWorkList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOneWorkOrderView.resx">
+      <DependentUpon>FrmOneWorkOrderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmPmsAnnualPlanAdjustment.resx">
+      <DependentUpon>FrmPmsAnnualPlanAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmPmsAnnualPlanFirstArrange.resx">
+      <DependentUpon>FrmPmsAnnualPlanFirstArrange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSelectNotFinishedWorkOrder.resx">
+      <DependentUpon>FrmSelectNotFinishedWorkOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmToolWorkInfo.resx">
+      <DependentUpon>FrmToolWorkInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkinfoTempletClassEdit.resx">
+      <DependentUpon>FrmWorkinfoTempletClassEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkinfoTempletClass.resx">
+      <DependentUpon>FrmWorkinfoTempletClass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEquipmentHistory.resx">
+      <DependentUpon>FrmEquipmentHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEquipmentWorkInfo.resx">
+      <DependentUpon>FrmEquipmentWorkInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEquipmentWorkInfoAddEdit.resx">
+      <DependentUpon>FrmEquipmentWorkInfoAddEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmFinishedWorkOrderView.resx">
+      <DependentUpon>FrmFinishedWorkOrderView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmGauge.resx">
+      <DependentUpon>FrmGauge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmIncreaseGauge.resx">
+      <DependentUpon>FrmIncreaseGauge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMeasureReportTemplate.resx">
+      <DependentUpon>FrmMeasureReportTemplate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmQuicklyInsertEquipment.resx">
+      <DependentUpon>FrmQuicklyInsertEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmReplacedWorkView.resx">
+      <DependentUpon>FrmReplacedWorkView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmReplaceWork.resx">
+      <DependentUpon>FrmReplaceWork.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSetGaugeType.resx">
+      <DependentUpon>FrmSetGaugeType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmTaskDetail.resx">
+      <DependentUpon>FrmTaskDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmTimingCompFirstVal.resx">
+      <DependentUpon>FrmTimingCompFirstVal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmTimingCompGrpSel.resx">
+      <DependentUpon>FrmTimingCompGrpSel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmTimingCompInit.resx">
+      <DependentUpon>FrmTimingCompInit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmTotalGauge.resx">
+      <DependentUpon>FrmTotalGauge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkInfo.resx">
+      <DependentUpon>FrmWorkInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkInfoFirstArrange.resx">
+      <DependentUpon>FrmWorkInfoFirstArrange.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkInfoSpare.resx">
+      <DependentUpon>FrmWorkInfoSpare.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderCancel.resx">
+      <DependentUpon>FrmWorkOrderCancel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderFinish.resx">
+      <DependentUpon>FrmWorkOrderFinish.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderHistory.resx">
+      <DependentUpon>FrmWorkOrderHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderMeaRptView.resx">
+      <DependentUpon>FrmWorkOrderMeaRptView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderMeasureReport.resx">
+      <DependentUpon>FrmWorkOrderMeasureReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderNewEdit.resx">
+      <DependentUpon>FrmWorkOrderNewEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderNoPer.resx">
+      <DependentUpon>FrmWorkOrderNoPer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderSpConsume.resx">
+      <DependentUpon>FrmWorkOrderSpConsume.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderTempAdd.resx">
+      <DependentUpon>FrmWorkOrderTempAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderToOther.resx">
+      <DependentUpon>FrmWorkOrderToOther.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderTrace.resx">
+      <DependentUpon>FrmWorkOrderTrace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkOrderTraceEdit.resx">
+      <DependentUpon>FrmWorkOrderTraceEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcWorkInfoBriefDescription.resx">
+      <DependentUpon>UcWorkInfoBriefDescription.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcWorkInfo.resx">
+      <DependentUpon>UcWorkInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcWorkInfoNotEdit.resx">
+      <DependentUpon>UcWorkInfoNotEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcWorkOrder.resx">
+      <DependentUpon>UcWorkOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWorkTemplet.resx">
+      <DependentUpon>FrmWorkTemplet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSelectWorkTemplet.resx">
+      <DependentUpon>FrmSelectWorkTemplet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmToolWorkInfoMain.resx">
+      <DependentUpon>FrmToolWorkInfoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmToolWorkInfoUnit.resx">
+      <DependentUpon>FrmToolWorkInfoUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmToolWorkInfoPH.resx">
+      <DependentUpon>FrmToolWorkInfoPH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmQuicklyInsertEquipmentNew.resx">
+      <DependentUpon>FrmQuicklyInsertEquipmentNew.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\船舶设备列表模板.xls" />
+    <None Include="Resources\设备备件快速初始化模板.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-open.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

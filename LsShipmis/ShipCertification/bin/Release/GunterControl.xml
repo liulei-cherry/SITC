@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GunterControl</name>
+    </assembly>
+    <members>
+        <member name="T:GunterControl.ViewLayer.RightOneRow">
+            <summary>
+            右边显示的一行
+            </summary>
+        </member>
+        <member name="F:GunterControl.ViewLayer.RightOneRow.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:GunterControl.ViewLayer.RightOneRow.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:GunterControl.ViewLayer.RightOneRow.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:GunterControl.ViewLayer.RightOneRow.changeData(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="changeStyle">当以正向为准,就是foredate不能改的话,是true,当以负向为准,即enddate不能改的话为false</param>
+        </member>
+        <member name="M:GunterControl.ViewLayer.RightOneRow.RightOneRow_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            当在指定区域内,变化手势,前端后端均变[-]中间变化[+]移动样式,不在上面变成普通的手.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:GunterControl.ViewLayer.TimeBarSetting">
+            <summary>
+            时间条设置
+            </summary>
+        </member>
+        <member name="F:GunterControl.ViewLayer.TimeBarSetting.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:GunterControl.ViewLayer.TimeBarSetting.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:GunterControl.ViewLayer.TimeBarSetting.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:GunterControl.ViewLayer.GunterBox.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:GunterControl.ViewLayer.GunterBox.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:GunterControl.ViewLayer.GunterBox.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:GunterControl.ViewLayer.GunterBox.RetrieveData(System.Collections.Generic.List{GunterControl.Common.UserColumn},System.Data.DataTable,System.Boolean,System.String@)">
+            <summary>
+            重新刷新数据,控件重新加载,速度相对较慢.
+            </summary>
+        </member>
+        <member name="M:GunterControl.ViewLayer.GunterBox.RetrieveData(System.Collections.Generic.List{GunterControl.Common.UserColumn},System.Data.DataTable,System.Boolean,System.Boolean,System.String@)">
+            <summary>
+            重新刷新数据,控件重新加载,速度相对较慢.
+            </summary>
+        </member>
+        <member name="M:GunterControl.ViewLayer.GunterBox.RetrieveOneDate(System.Int32)">
+            <summary>
+            仅刷新一行的数据.
+            dt中暂时不变化,最后一起变化.
+            </summary>
+            <param name="row">根据哪一行刷新</param>
+        </member>
+        <member name="M:GunterControl.ViewLayer.GunterBox.WhichOneIsOnFocus(System.Int32,System.Boolean)">
+            <summary>
+            哪一行当前具备交点.
+            </summary>
+            <param name="lineCount">当前第几行</param>
+            <param name="needResetLeft">左边需要重画</param>
+        </member>
+        <member name="F:GunterControl.Common.ButtonEx.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:GunterControl.Common.ButtonEx.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:GunterControl.Common.ButtonEx.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:GunterControl.GunterToolBar">
+            <summary>
+            甘特图默认工具条
+            </summary>
+        </member>
+        <member name="F:GunterControl.GunterToolBar.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:GunterControl.GunterToolBar.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:GunterControl.GunterToolBar.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:GunterControl.GunterToolBar.CloseButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            关闭按钮按下.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GunterControl.ViewLayer.OneRowTimeBar.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:GunterControl.ViewLayer.OneRowTimeBar.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:GunterControl.ViewLayer.OneRowTimeBar.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:GunterControl.DataControlLayer.GunterControlBaseData">
+            <summary>
+            甘特图的控制数据，所有最基础的数据都从这里得到。.
+            </summary>
+        </member>
+        <member name="T:GunterControl.DataControlLayer.GunterData">
+            <summary>
+            GunterData 包含 数据项 和 时间起点，时间跨度的对象.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.ItemId">
+            <summary>
+            对象id，格式无限制，由调用者传入，这里仅作存储或者抛出事件的引用。.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.ItemDetail">
+            <summary>
+            对象显示的名称,如任务名称,事件名称等.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.ForeDate">
+            <summary>
+            任务最早可以什么时间执行，前允差时间.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.BeginDate">
+            <summary>
+            任务开始时间.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.CanDelayDate">
+            <summary>
+            可以延长到的时间，后允差.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.IsTimingWork">
+            <summary>
+            是否是周期性的工作.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.CalculateTimes">
+            <summary>
+            重复计算的次数,当为0时,则计算次数根据结束时间确定,只要不超过结束时间的都可以计算出来.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.CycleLength">
+            <summary>
+            周期，根据系统的计算单位进行计算。.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.OthersDates">
+            <summary>
+            其他欲显示字段名称.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.Childs">
+            <summary>
+            当前元素的下一级元素内容.
+            </summary>
+        </member>
+        <member name="P:GunterControl.DataControlLayer.GunterData.Level">
+            <summary>
+            当前元素行的层次数，默认为1 当为别人child时，child的level+1.
+            </summary>
+        </member>
+        <member name="T:GunterControl.ViewLayer.TimeBar">
+            <summary>
+            甘特图的一条时间线
+            </summary>
+        </member>
+        <member name="F:GunterControl.ViewLayer.TimeBar.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:GunterControl.ViewLayer.TimeBar.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:GunterControl.ViewLayer.TimeBar.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:GunterControl.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:GunterControl.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:GunterControl.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

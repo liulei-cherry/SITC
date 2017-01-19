@@ -1,0 +1,13 @@
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\bin\Release\Translate.xml
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\bin\Release\SYS.ico
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\bin\Release\FileOperationBase.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\bin\Release\FileOperationBase.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\bin\Release\CommonOperation.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\bin\Release\CommonViewer.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\bin\Release\OfficeOperation.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\bin\Release\CommonOperation.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\bin\Release\CommonViewer.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\bin\Release\OfficeOperation.xml
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\obj\Release\FileOperationBase.csprojResolveAssemblyReference.cache
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\obj\Release\FileOperationBase.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\FileOperationBase\obj\Release\FileOperationBase.pdb

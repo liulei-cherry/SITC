@@ -1,0 +1,6 @@
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\bin\Release\DllLibrary.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\bin\Release\DllLibrary.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\bin\Release\OfficeOperation.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\bin\Release\OfficeOperation.xml
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\obj\Release\DllLibrary.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\obj\Release\DllLibrary.pdb

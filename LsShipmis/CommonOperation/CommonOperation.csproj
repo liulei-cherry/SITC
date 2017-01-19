@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonOperation</RootNamespace>
+    <AssemblyName>CommonOperation</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/CommonOperation/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorityNameList.cs" />
+    <Compile Include="BaseClass\Authority.cs" />
+    <Compile Include="BaseClass\BaseRight.cs" />
+    <Compile Include="BaseClass\CommonClass.cs" />
+    <Compile Include="BaseClass\CommonPrintTableName.cs" />
+    <Compile Include="BaseClass\FileSize.cs" />
+    <Compile Include="BaseClass\FldProperty.cs" />
+    <Compile Include="BaseClass\SuperUser.cs" />
+    <Compile Include="ConstParameter.cs" />
+    <Compile Include="Enum\Enums.cs" />
+    <Compile Include="Functions\BaseRightService.cs" />
+    <Compile Include="Functions\CommonItem.cs" />
+    <Compile Include="Functions\FileCompress.cs" />
+    <Compile Include="Functions\OurField.cs" />
+    <Compile Include="Functions\OurTable.cs" />
+    <Compile Include="Functions\OurTableServices.cs" />
+    <Compile Include="Functions\Parameter.cs" />
+    <Compile Include="Functions\ProxyRight.cs" />
+    <Compile Include="Functions\SqlServerAccess.cs" />
+    <Compile Include="Functions\InterfaceInstantiation.cs" />
+    <Compile Include="Functions\SqlServerOperation.cs" />
+    <Compile Include="Functions\StringOperation.cs" />
+    <Compile Include="Functions\TransactionClass.cs" />
+    <Compile Include="Functions\UserLogin.cs" />
+    <Compile Include="Functions\WebOperation.cs" />
+    <Compile Include="Interfaces\IBandingFiles.cs" />
+    <Compile Include="Interfaces\ICustomForm.cs" />
+    <Compile Include="Interfaces\IDBAccess.cs" />
+    <Compile Include="Interfaces\IDBOperation.cs" />
+    <Compile Include="Interfaces\IFunctionChildWindow.cs" />
+    <Compile Include="Interfaces\IFunctionOfBusiness.cs" />
+    <Compile Include="Interfaces\IFunctionMainWindow.cs" />
+    <Compile Include="Interfaces\ILoginUser.cs" />
+    <Compile Include="Interfaces\IObjectsService.cs" />
+    <Compile Include="Interfaces\IObjectsViewer.cs" />
+    <Compile Include="Interfaces\IOneObjectViewer.cs" />
+    <Compile Include="Interfaces\IRemind.cs" />
+    <Compile Include="Interfaces\IRemindViewState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Smtp.cs" />
+    <Compile Include="Tools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="功能说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

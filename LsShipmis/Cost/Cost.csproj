@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5A38561-8A4D-41D3-91ED-AB66F2501A84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cost</RootNamespace>
+    <AssemblyName>Cost</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="OfficeOperation, Version=1.4.2.15, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllLibrary\ViewControlDll\OfficeOperation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alert\VoucherAlert.cs" />
+    <Compile Include="Alert\VoucherAlertOnce.cs" />
+    <Compile Include="Alert\CostNotVoucherAlert.cs" />
+    <Compile Include="Alert\VoucherNotPassAlertOnce.cs" />
+    <Compile Include="DataObject\Account.cs" />
+    <Compile Include="DataObject\ACTUAL_COSTS.cs" />
+    <Compile Include="DataObject\ANNUAL_BUDGET.cs" />
+    <Compile Include="DataObject\CostAccountPosition.cs" />
+    <Compile Include="DataObject\CostBudget.cs" />
+    <Compile Include="DataObject\CostDisorder.cs" />
+    <Compile Include="DataObject\CostInsurance.cs" />
+    <Compile Include="DataObject\CostSimpleclass.cs" />
+    <Compile Include="DataObject\CostWaste.cs" />
+    <Compile Include="DataObject\VOUCHER.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\AccountService.cs" />
+    <Compile Include="Services\AccountServiceXEx.cs" />
+    <Compile Include="Services\ACTUAL_COSTSService.cs" />
+    <Compile Include="Services\ACTUAL_COSTSServiceXEx.cs" />
+    <Compile Include="Services\ANNUAL_BUDGETService.cs" />
+    <Compile Include="Services\ANNUAL_BUDGETServiceXEx.cs" />
+    <Compile Include="Services\CostAccountPositionService.cs" />
+    <Compile Include="Services\CostAccountPositionServiceEx.cs" />
+    <Compile Include="Services\CostBudgetService.cs" />
+    <Compile Include="Services\CostDisorderService.cs" />
+    <Compile Include="Services\CostInsuranceService.cs" />
+    <Compile Include="Services\CostSimpleclassService.cs" />
+    <Compile Include="Services\CostSimpleclassServiceMore.cs" />
+    <Compile Include="Services\CostWasteService.cs" />
+    <Compile Include="Services\VOUCHERService.cs" />
+    <Compile Include="Services\VOUCHERServiceXEx.cs" />
+    <Compile Include="CostConfig.cs" />
+    <Compile Include="Services\CostDisorderServiceMore.cs" />
+    <Compile Include="Services\CostWasteServiceMore.cs" />
+    <Compile Include="Services\CostInsuranceServiceMore.cs" />
+    <Compile Include="Services\CostBudgetServiceEx.cs" />
+    <Compile Include="Viewer\FrmBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmBudget.designer.cs">
+      <DependentUpon>FrmBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmBudgetEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmBudgetEdit.designer.cs">
+      <DependentUpon>FrmBudgetEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCostAccountPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCostAccountPosition.designer.cs">
+      <DependentUpon>FrmCostAccountPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCostSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCostSubjects.designer.cs">
+      <DependentUpon>FrmEditOneCostSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCostSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCostSubjects.designer.cs">
+      <DependentUpon>FrmCostSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmAnnualBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmAnnualBudget.designer.cs">
+      <DependentUpon>FrmAnnualBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSimpleclass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSimpleclass.designer.cs">
+      <DependentUpon>FrmSimpleclass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSimpleclassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSimpleclassEdit.designer.cs">
+      <DependentUpon>FrmSimpleclassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmShipCaculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmShipCaculate.designer.cs">
+      <DependentUpon>FrmShipCaculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSum.designer.cs">
+      <DependentUpon>FrmSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmVoucher.designer.cs">
+      <DependentUpon>FrmVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmShipBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmShipBill.designer.cs">
+      <DependentUpon>FrmShipBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneVoucher.designer.cs">
+      <DependentUpon>FrmEditOneVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmShipOwnerCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmShipOwnerCost.designer.cs">
+      <DependentUpon>FrmShipOwnerCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneShipOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneShipOwner.designer.cs">
+      <DependentUpon>FrmEditOneShipOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmVoucherApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmVoucherApproval.designer.cs">
+      <DependentUpon>FrmVoucherApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWaste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWaste.designer.cs">
+      <DependentUpon>FrmWaste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWasteEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWasteEdit.designer.cs">
+      <DependentUpon>FrmWasteEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmInsurance.designer.cs">
+      <DependentUpon>FrmInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmInsuranceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmInsuranceEdit.designer.cs">
+      <DependentUpon>FrmInsuranceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcCostSubjectsTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcCostSubjectsTree.Designer.cs">
+      <DependentUpon>UcCostSubjectsTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmVoucherSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmVoucherSelect.designer.cs">
+      <DependentUpon>FrmVoucherSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCostBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCostBill.designer.cs">
+      <DependentUpon>FrmCostBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOuterSAPCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOuterSAPCost.designer.cs">
+      <DependentUpon>FrmOuterSAPCost.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseInfo\BaseInfo.csproj">
+      <Project>{71F49CE3-707D-409D-9796-48743BE13003}</Project>
+      <Name>BaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</Project>
+      <Name>CommonOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonViewer\CommonViewer.csproj">
+      <Project>{0AEB1FBC-6588-4EF9-8A44-A87597E71822}</Project>
+      <Name>CommonViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperationBase\FileOperationBase.csproj">
+      <Project>{e7c6132d-8312-4579-a384-2fcdb6c64e8c}</Project>
+      <Name>FileOperationBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperation\FileOperation.csproj">
+      <Project>{507F1A26-A810-448D-B49B-97D68D7B6EAC}</Project>
+      <Name>FileOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShipMisZHJ_WorkFlow\ShipMisZHJ_WorkFlow.csproj">
+      <Project>{B6804EA3-6F81-402D-8B27-42C2365345C8}</Project>
+      <Name>ShipMisZHJ_WorkFlow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmBudget.resx">
+      <DependentUpon>FrmBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmBudgetEdit.resx">
+      <DependentUpon>FrmBudgetEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCostAccountPosition.resx">
+      <DependentUpon>FrmCostAccountPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneCostSubjects.resx">
+      <DependentUpon>FrmEditOneCostSubjects.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCostSubjects.resx">
+      <DependentUpon>FrmCostSubjects.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmAnnualBudget.resx">
+      <DependentUpon>FrmAnnualBudget.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSimpleclass.resx">
+      <DependentUpon>FrmSimpleclass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSimpleclassEdit.resx">
+      <DependentUpon>FrmSimpleclassEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmShipCaculate.resx">
+      <DependentUpon>FrmShipCaculate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSum.resx">
+      <DependentUpon>FrmSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmVoucher.resx">
+      <DependentUpon>FrmVoucher.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmShipBill.resx">
+      <DependentUpon>FrmShipBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneVoucher.resx">
+      <DependentUpon>FrmEditOneVoucher.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmShipOwnerCost.resx">
+      <DependentUpon>FrmShipOwnerCost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneShipOwner.resx">
+      <DependentUpon>FrmEditOneShipOwner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmVoucherApproval.resx">
+      <DependentUpon>FrmVoucherApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWaste.resx">
+      <DependentUpon>FrmWaste.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWasteEdit.resx">
+      <DependentUpon>FrmWasteEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmInsurance.resx">
+      <DependentUpon>FrmInsurance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmInsuranceEdit.resx">
+      <DependentUpon>FrmInsuranceEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcCostSubjectsTree.resx">
+      <DependentUpon>UcCostSubjectsTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmVoucherSelect.resx">
+      <DependentUpon>FrmVoucherSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCostBill.resx">
+      <DependentUpon>FrmCostBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOuterSAPCost.resx">
+      <DependentUpon>FrmOuterSAPCost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

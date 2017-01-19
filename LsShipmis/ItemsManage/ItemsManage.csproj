@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{982FE57C-67B8-49E3-B7D0-A31B869C7584}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ItemsManage</RootNamespace>
+    <AssemblyName>ItemsManage</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/ItemsManage/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LSShipMis_Land\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OfficeOperation, Version=1.2.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllLibrary\ViewControlDll\OfficeOperation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataObject\ComponentType.cs" />
+    <Compile Include="DataObject\ComponentTypeMore.cs" />
+    <Compile Include="DataObject\ComponentUnit.cs" />
+    <Compile Include="DataObject\EquipmentClass.cs" />
+    <Compile Include="DataObject\EquipmentOperation.cs" />
+    <Compile Include="DataObject\MaterialType.cs" />
+    <Compile Include="DataObject\SpareInfo.cs" />
+    <Compile Include="DataObject\MaterialInfo.cs" />
+    <Compile Include="ItemsManageConfig.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmEquipmentPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmEquipmentPrint.Designer.cs">
+      <DependentUpon>FrmEquipmentPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ComponentTypeServiceMore.cs" />
+    <Compile Include="Services\ComponentUnitService.cs" />
+    <Compile Include="Services\ComponentUnitServiceMore.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ComponentTypeService.cs" />
+    <Compile Include="Services\ComptypeSpareService.cs" />
+    <Compile Include="Services\EquipmentClassService.cs" />
+    <Compile Include="Services\EquipmentOperationService.cs" />
+    <Compile Include="Services\MaterialInfoServiceMore.cs" />
+    <Compile Include="Services\MaterialTypeService.cs" />
+    <Compile Include="Services\SpareInfoService.cs" />
+    <Compile Include="Services\SpareInfoServiceMore.cs" />
+    <Compile Include="Services\MaterialInfoService.cs" />
+    <Compile Include="Services\EquipmentClassServiceEx.cs" />
+    <Compile Include="Services\EquipmentOperationServiceEx.cs" />
+    <Compile Include="Viewer\FrmCloneEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCloneEquipment.Designer.cs">
+      <DependentUpon>FrmCloneEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmComponentManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmComponentManage.Designer.cs">
+      <DependentUpon>FrmComponentManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneEquipmentClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneEquipmentClass.Designer.cs">
+      <DependentUpon>FrmEditOneEquipmentClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentClass.designer.cs">
+      <DependentUpon>FrmEquipmentClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentSortOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentSortOut.designer.cs">
+      <DependentUpon>FrmEquipmentSortOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialBaseEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialBaseEdit.Designer.cs">
+      <DependentUpon>FrmMaterialBaseEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMeaReportType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMeaReportType.designer.cs">
+      <DependentUpon>FrmMeaReportType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectComponent.Designer.cs">
+      <DependentUpon>FrmSelectComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectMaterial.Designer.cs">
+      <DependentUpon>FrmSelectMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectMaterialType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectMaterialType.Designer.cs">
+      <DependentUpon>FrmSelectMaterialType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectSpare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectSpare.Designer.cs">
+      <DependentUpon>FrmSelectSpare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareBasic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareBasic.Designer.cs">
+      <DependentUpon>FrmSpareBasic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareForEquipType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareForEquipType.designer.cs">
+      <DependentUpon>FrmSpareForEquipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePreview.Designer.cs">
+      <DependentUpon>FrmSparePreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcComponentSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcComponentSelect.designer.cs">
+      <DependentUpon>UcComponentSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcEquipment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcEquipment.Designer.cs">
+      <DependentUpon>UcEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcEquipmentClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcEquipmentClass.designer.cs">
+      <DependentUpon>UcEquipmentClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcEquipmentClassTreeWithEquipment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcEquipmentClassTreeWithEquipment.Designer.cs">
+      <DependentUpon>UcEquipmentClassTreeWithEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcSpareInWhich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcSpareInWhich.Designer.cs">
+      <DependentUpon>UcSpareInWhich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentSortTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentSortTree.designer.cs">
+      <DependentUpon>FrmEquipmentSortTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEquipmentOperation.designer.cs">
+      <DependentUpon>FrmEquipmentOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditEquipmentOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditEquipmentOperation.Designer.cs">
+      <DependentUpon>FrmEditEquipmentOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneEquipment.Designer.cs">
+      <DependentUpon>FrmEditOneEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialTypeEdit.designer.cs">
+      <DependentUpon>FrmMaterialTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcMaterialType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcMaterialType.designer.cs">
+      <DependentUpon>UcMaterialType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcMaterialTypeTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcMaterialTypeTree.Designer.cs">
+      <DependentUpon>UcMaterialTypeTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneMaterialType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneMaterialType.Designer.cs">
+      <DependentUpon>FrmEditOneMaterialType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcMaterialInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcMaterialInfo.designer.cs">
+      <DependentUpon>UcMaterialInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneMaterialInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneMaterialInfo.Designer.cs">
+      <DependentUpon>FrmEditOneMaterialInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmEquipmentPrint.resx">
+      <DependentUpon>FrmEquipmentPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCloneEquipment.resx">
+      <DependentUpon>FrmCloneEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmComponentManage.resx">
+      <DependentUpon>FrmComponentManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneEquipmentClass.resx">
+      <DependentUpon>FrmEditOneEquipmentClass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEquipmentClass.resx">
+      <DependentUpon>FrmEquipmentClass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEquipmentSortOut.resx">
+      <DependentUpon>FrmEquipmentSortOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialBaseEdit.resx">
+      <DependentUpon>FrmMaterialBaseEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMeaReportType.resx">
+      <DependentUpon>FrmMeaReportType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSelectComponent.resx">
+      <DependentUpon>FrmSelectComponent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSelectMaterial.resx">
+      <DependentUpon>FrmSelectMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSelectMaterialType.resx">
+      <DependentUpon>FrmSelectMaterialType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSelectSpare.resx">
+      <DependentUpon>FrmSelectSpare.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareBasic.resx">
+      <DependentUpon>FrmSpareBasic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareForEquipType.resx">
+      <DependentUpon>FrmSpareForEquipType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSparePreview.resx">
+      <DependentUpon>FrmSparePreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcComponentSelect.resx">
+      <DependentUpon>UcComponentSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcEquipment.resx">
+      <DependentUpon>UcEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcEquipmentClass.resx">
+      <DependentUpon>UcEquipmentClass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcEquipmentClassTreeWithEquipment.resx">
+      <DependentUpon>UcEquipmentClassTreeWithEquipment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcSpareInWhich.resx">
+      <DependentUpon>UcSpareInWhich.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEquipmentSortTree.resx">
+      <DependentUpon>FrmEquipmentSortTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEquipmentOperation.resx">
+      <DependentUpon>FrmEquipmentOperation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditEquipmentOperation.resx">
+      <DependentUpon>FrmEditEquipmentOperation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneEquipment.resx">
+      <DependentUpon>FrmEditOneEquipment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialTypeEdit.resx">
+      <DependentUpon>FrmMaterialTypeEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcMaterialType.resx">
+      <DependentUpon>UcMaterialType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcMaterialTypeTree.resx">
+      <DependentUpon>UcMaterialTypeTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneMaterialType.resx">
+      <DependentUpon>FrmEditOneMaterialType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcMaterialInfo.resx">
+      <DependentUpon>UcMaterialInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneMaterialInfo.resx">
+      <DependentUpon>FrmEditOneMaterialInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseInfo\BaseInfo.csproj">
+      <Project>{71F49CE3-707D-409D-9796-48743BE13003}</Project>
+      <Name>BaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</Project>
+      <Name>CommonOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonViewer\CommonViewer.csproj">
+      <Project>{0AEB1FBC-6588-4EF9-8A44-A87597E71822}</Project>
+      <Name>CommonViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperationBase\FileOperationBase.csproj">
+      <Project>{E7C6132D-8312-4579-A384-2FCDB6C64E8C}</Project>
+      <Name>FileOperationBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperation\FileOperation.csproj">
+      <Project>{507F1A26-A810-448D-B49B-97D68D7B6EAC}</Project>
+      <Name>FileOperation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

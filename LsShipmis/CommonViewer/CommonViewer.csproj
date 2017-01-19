@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0AEB1FBC-6588-4EF9-8A44-A87597E71822}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonViewer</RootNamespace>
+    <AssemblyName>CommonViewer</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/CommonViewer/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LSShipMis_Land\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="OfficeOperation, Version=1.4.2.15, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllLibrary\ViewControlDll\OfficeOperation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseControlService\clsPassword.cs" />
+    <Compile Include="BaseControlService\DataGridViewExt.cs" />
+    <Compile Include="BaseControlService\FileDbService.cs" />
+    <Compile Include="BaseControlService\FormControlOption.cs" />
+    <Compile Include="BaseControlService\MonitorControls.cs" />
+    <Compile Include="BaseControl\ButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseControl\ButtonEx.Designer.cs">
+      <DependentUpon>ButtonEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseControl\ComboxEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseControl\ComboxEx.Designer.cs">
+      <DependentUpon>ComboxEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseControl\DateTimePickerEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseControl\DateTimePickerEx.designer.cs">
+      <DependentUpon>DateTimePickerEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseControl\DragTreeViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseControl\DragTreeViewEx.designer.cs">
+      <DependentUpon>DragTreeViewEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseControl\FolderBrowserDialogEx.cs" />
+    <Compile Include="BaseControl\ListBox\ListBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseControl\ListBox\ListBoxExItemCollection.cs" />
+    <Compile Include="BaseControl\ListBox\ListBoxItemEx.cs" />
+    <Compile Include="BaseControl\ListBox\NativeMethods.cs" />
+    <Compile Include="BaseControl\ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseControl\MessageBoxEx.cs" />
+    <Compile Include="BaseControl\NativeMethods.cs" />
+    <Compile Include="BaseControl\OpenFileDialogEx.cs" />
+    <Compile Include="BaseControl\SaveFileDialogEx.cs" />
+    <Compile Include="BaseControl\UCObjectsGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseControl\UCObjectsGridView.Designer.cs">
+      <DependentUpon>UCObjectsGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BaseMdiChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseMdiChildForm.Designer.cs">
+      <DependentUpon>BaseMdiChildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\DgvBindDrop.cs" />
+    <Compile Include="BaseForm\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\FrmBaseSelectValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FrmBaseSelectValue.Designer.cs">
+      <DependentUpon>FrmBaseSelectValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\FrmBusy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FrmBusy.Designer.cs">
+      <DependentUpon>FrmBusy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmColumnSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmColumnSet.Designer.cs">
+      <DependentUpon>frmColumnSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\FrmDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FrmDatabase.Designer.cs">
+      <DependentUpon>FrmDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\FrmDisagree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FrmDisagree.Designer.cs">
+      <DependentUpon>FrmDisagree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\FrmInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FrmInputBox.Designer.cs">
+      <DependentUpon>FrmInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\FrmInputBoxGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FrmInputBoxGrid.designer.cs">
+      <DependentUpon>FrmInputBoxGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\FrmOptConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FrmOptConfig.Designer.cs">
+      <DependentUpon>FrmOptConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\FrmOurReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FrmOurReport.Designer.cs">
+      <DependentUpon>FrmOurReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\OurMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\OurMessageBox.designer.cs">
+      <DependentUpon>OurMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\FrmBusyWithStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\FrmBusyWithStep.Designer.cs">
+      <DependentUpon>FrmBusyWithStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewConfig.cs" />
+    <Compile Include="MultiLanguage\MultiLanguageDictionary.cs" />
+    <Compile Include="MultiLanguage\MultiLanguageTranslate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseControl\TextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseControl\UcDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseControl\UcDataGridView.designer.cs">
+      <DependentUpon>UcDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\cn.maritech.www\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseControl\ComboxEx.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ComboxEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControl\DateTimePickerEx.resx">
+      <DependentUpon>DateTimePickerEx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControl\DragTreeViewEx.resx">
+      <DependentUpon>DragTreeViewEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControl\UCObjectsGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCObjectsGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BaseMdiChildForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseMdiChildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FormBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FrmBaseSelectValue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBaseSelectValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FrmBusy.resx">
+      <DependentUpon>FrmBusy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmColumnSet.resx">
+      <DependentUpon>frmColumnSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FrmDatabase.resx">
+      <DependentUpon>FrmDatabase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FrmDisagree.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDisagree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FrmInputBox.resx">
+      <DependentUpon>FrmInputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FrmInputBoxGrid.resx">
+      <DependentUpon>FrmInputBoxGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FrmOptConfig.resx">
+      <DependentUpon>FrmOptConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FrmOurReport.resx">
+      <DependentUpon>FrmOurReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\OurMessageBox.resx">
+      <DependentUpon>OurMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\FrmBusyWithStep.resx">
+      <DependentUpon>FrmBusyWithStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControl\UcDataGridView.resx">
+      <DependentUpon>UcDataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\cn.maritech.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\cn.maritech.www\WebService.disco" />
+    <None Include="Web References\cn.maritech.www\WebService.wsdl" />
+    <None Include="Resources\search.png" />
+    <None Include="SYS.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Translate.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="uninstall.ico" />
+    <Content Include="功能说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</Project>
+      <Name>CommonOperation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.maritech.cn/shipmis/web/WebService.asmx%3fop=checkRight">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\cn.maritech.www\</RelPath>
+      <UpdateFromURL>http://www.maritech.cn/shipmis/web/WebService.asmx%3fop=checkRight</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CommonViewer_cn_maritech_www_WebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

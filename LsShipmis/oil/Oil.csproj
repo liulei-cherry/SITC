@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5256114F-D96D-4FA5-AD34-16D9D120C0E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oil</RootNamespace>
+    <AssemblyName>Oil</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OfficeOperation, Version=1.2.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllLibrary\ViewControlDll\OfficeOperation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.5.16946, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllLibrary\ViewControlDll\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OilConfig.cs" />
+    <Compile Include="DataObject\HOil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataObject\HOilAdd.cs" />
+    <Compile Include="DataObject\HOilApply.cs" />
+    <Compile Include="DataObject\HOilApplydetail.cs" />
+    <Compile Include="DataObject\HOilConsume.cs" />
+    <Compile Include="DataObject\HOilLuboilConsume.cs" />
+    <Compile Include="DataObject\HOilLuboilReport.cs" />
+    <Compile Include="DataObject\HOilOrder.cs" />
+    <Compile Include="DataObject\HOilOrderDetail.cs" />
+    <Compile Include="DataObject\HOilReport.cs" />
+    <Compile Include="DataObject\HOilShip.cs" />
+    <Compile Include="DataObject\HOilWater.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\HOilAddService.cs" />
+    <Compile Include="Services\HOilApplyAlert.cs" />
+    <Compile Include="Services\HOilApplyAlertOnce.cs" />
+    <Compile Include="Services\HOilApplyDetailService.cs" />
+    <Compile Include="Services\HOilApplyService.cs" />
+    <Compile Include="Services\HOilConsumeService.cs" />
+    <Compile Include="Services\HOilLuboilConsumeService.cs" />
+    <Compile Include="Services\HOilLuboilReportService.cs" />
+    <Compile Include="Services\HOilOrderDetailService.cs" />
+    <Compile Include="Services\HOilOrderService.cs" />
+    <Compile Include="Services\HOilReportService.cs" />
+    <Compile Include="Services\HOilService.cs" />
+    <Compile Include="Services\HOilShipService.cs" />
+    <Compile Include="Services\HOilWaterService.cs" />
+    <Compile Include="Services\HOilServiceMore.cs" />
+    <Compile Include="Services\HOilWaterServiceMore.cs" />
+    <Compile Include="Services\HOilAddServiceMore.cs" />
+    <Compile Include="Services\HOilConsumeServiceMore.cs" />
+    <Compile Include="Services\HOilApplyDetailServiceMore.cs" />
+    <Compile Include="Services\HOilApplyServiceMore.cs" />
+    <Compile Include="Services\HOilOrderServiceMore.cs" />
+    <Compile Include="Services\HOilOrderDetailServiceMore.cs" />
+    <Compile Include="Services\HOilLuboilConsumeServiceMore.cs" />
+    <Compile Include="Services\HOilLuboilReportServiceMore.cs" />
+    <Compile Include="Services\HOilReportServiceMore.cs" />
+    <Compile Include="Services\OilNotVoucherAlert.cs" />
+    <Compile Include="Viewer\FrmOilApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilApply.designer.cs">
+      <DependentUpon>FrmOilApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilApplyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilApplyEdit.designer.cs">
+      <DependentUpon>FrmOilApplyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilAudit.Designer.cs">
+      <DependentUpon>FrmOilAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilConsumeZed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilConsumeZed.designer.cs">
+      <DependentUpon>FrmOilLuboilConsumeZed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilOfShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilOfShip.Designer.cs">
+      <DependentUpon>FrmOilOfShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMultiSelectOilType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMultiSelectOilType.designer.cs">
+      <DependentUpon>FrmMultiSelectOilType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilVoucher.Designer.cs">
+      <DependentUpon>FrmOilVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilPurchaseOrderSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilPurchaseOrderSelect.designer.cs">
+      <DependentUpon>FrmOilPurchaseOrderSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmWater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmWater.designer.cs">
+      <DependentUpon>FrmWater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneWater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneWater.designer.cs">
+      <DependentUpon>FrmEditOneWater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOil.designer.cs">
+      <DependentUpon>FrmOil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilEdit.designer.cs">
+      <DependentUpon>FrmOilEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneOilAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneOilAdd.designer.cs">
+      <DependentUpon>FrmEditOneOilAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilAdd.designer.cs">
+      <DependentUpon>FrmOilAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilConsumeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilConsumeEdit.designer.cs">
+      <DependentUpon>FrmOilConsumeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilConsume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilConsume.designer.cs">
+      <DependentUpon>FrmOilConsume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilOrder.designer.cs">
+      <DependentUpon>FrmOilOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilOrderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilOrderEdit.designer.cs">
+      <DependentUpon>FrmOilOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilConsume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilConsume.designer.cs">
+      <DependentUpon>FrmOilLuboilConsume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilConsumeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilConsumeEdit.designer.cs">
+      <DependentUpon>FrmOilLuboilConsumeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilReport.designer.cs">
+      <DependentUpon>FrmOilLuboilReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilReportEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilReportEdit.designer.cs">
+      <DependentUpon>FrmOilLuboilReportEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilReport.designer.cs">
+      <DependentUpon>FrmOilReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilReportEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilReportEdit.designer.cs">
+      <DependentUpon>FrmOilReportEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilConsumeSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmOilLuboilConsumeSum.designer.cs">
+      <DependentUpon>FrmOilLuboilConsumeSum.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseInfo\BaseInfo.csproj">
+      <Project>{71F49CE3-707D-409D-9796-48743BE13003}</Project>
+      <Name>BaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</Project>
+      <Name>CommonOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonViewer\CommonViewer.csproj">
+      <Project>{0AEB1FBC-6588-4EF9-8A44-A87597E71822}</Project>
+      <Name>CommonViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cost\Cost.csproj">
+      <Project>{A5A38561-8A4D-41D3-91ED-AB66F2501A84}</Project>
+      <Name>Cost</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperationBase\FileOperationBase.csproj">
+      <Project>{E7C6132D-8312-4579-A384-2FCDB6C64E8C}</Project>
+      <Name>FileOperationBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperation\FileOperation.csproj">
+      <Project>{507F1A26-A810-448D-B49B-97D68D7B6EAC}</Project>
+      <Name>FileOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShipMisZHJ_WorkFlow\ShipMisZHJ_WorkFlow.csproj">
+      <Project>{b6804ea3-6f81-402d-8b27-42c2365345c8}</Project>
+      <Name>ShipMisZHJ_WorkFlow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilApply.resx">
+      <DependentUpon>FrmOilApply.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilApplyEdit.resx">
+      <DependentUpon>FrmOilApplyEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilAudit.resx">
+      <DependentUpon>FrmOilAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilLuboilConsumeZed.resx">
+      <DependentUpon>FrmOilLuboilConsumeZed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilOfShip.resx">
+      <DependentUpon>FrmOilOfShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMultiSelectOilType.resx">
+      <DependentUpon>FrmMultiSelectOilType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilVoucher.resx">
+      <DependentUpon>FrmOilVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilPurchaseOrderSelect.resx">
+      <DependentUpon>FrmOilPurchaseOrderSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmWater.resx">
+      <DependentUpon>FrmWater.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneWater.resx">
+      <DependentUpon>FrmEditOneWater.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOil.resx">
+      <DependentUpon>FrmOil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilEdit.resx">
+      <DependentUpon>FrmOilEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneOilAdd.resx">
+      <DependentUpon>FrmEditOneOilAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilAdd.resx">
+      <DependentUpon>FrmOilAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilConsumeEdit.resx">
+      <DependentUpon>FrmOilConsumeEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilConsume.resx">
+      <DependentUpon>FrmOilConsume.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilOrder.resx">
+      <DependentUpon>FrmOilOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilOrderEdit.resx">
+      <DependentUpon>FrmOilOrderEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilLuboilConsume.resx">
+      <DependentUpon>FrmOilLuboilConsume.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilLuboilConsumeEdit.resx">
+      <DependentUpon>FrmOilLuboilConsumeEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilLuboilReport.resx">
+      <DependentUpon>FrmOilLuboilReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilLuboilReportEdit.resx">
+      <DependentUpon>FrmOilLuboilReportEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilReport.resx">
+      <DependentUpon>FrmOilReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilReportEdit.resx">
+      <DependentUpon>FrmOilReportEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmOilLuboilConsumeSum.resx">
+      <DependentUpon>FrmOilLuboilConsumeSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

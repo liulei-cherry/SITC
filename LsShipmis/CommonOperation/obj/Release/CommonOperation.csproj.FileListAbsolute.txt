@@ -1,0 +1,5 @@
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\CommonOperation\bin\Release\CommonOperation.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\CommonOperation\bin\Release\CommonOperation.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\CommonOperation\obj\Release\CommonOperation.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\CommonOperation\obj\Release\CommonOperation.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\CommonOperation\obj\Release\CommonOperation.csprojResolveAssemblyReference.cache

@@ -1,0 +1,18 @@
+<Main>
+  <AutoUpdateVersion>
+    <AutoUpdateID>XZB</AutoUpdateID>
+    <OBJECT_ID>XZB</OBJECT_ID>
+    <IsValid>1</IsValid>
+    <Version>4.7.5.5</Version>
+    <CreateDate>2011/12/17 12:50:34</CreateDate>
+    <EffectiveStartTime>2011/12/17 12:50:34</EffectiveStartTime>
+  </AutoUpdateVersion>
+  <AutoUpdateFile>
+    <AutoUpdateFileID>XZB</AutoUpdateFileID>
+    <OBJECT_ID>XZB</OBJECT_ID>
+    <FileVsersionNo>XZB</FileVsersionNo>
+    <FileName>XZB</FileName>
+    <FileMD5>XZB</FileMD5>
+    <FilePath>XZB</FilePath>
+  </AutoUpdateFile>
+</Main>

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{507F1A26-A810-448D-B49B-97D68D7B6EAC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FileOperation</RootNamespace>
+    <AssemblyName>FileOperation</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/FileOperation/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileBoundingOperation.cs" />
+    <Compile Include="Forms\FilePropertys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FilePropertys.designer.cs">
+      <DependentUpon>FilePropertys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FileSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FileSearch.designer.cs">
+      <DependentUpon>FileSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDocManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDocManagement.designer.cs">
+      <DependentUpon>FrmDocManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFileBoundShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFileBoundShow.designer.cs">
+      <DependentUpon>frmFileBoundShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFileReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFileReference.designer.cs">
+      <DependentUpon>FrmFileReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFilesDistribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFilesDistribute.designer.cs">
+      <DependentUpon>FrmFilesDistribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPropertyModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPropertyModify.designer.cs">
+      <DependentUpon>frmPropertyModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportFile.designer.cs">
+      <DependentUpon>ImportFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UCFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UCFile.designer.cs">
+      <DependentUpon>UCFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UcFilesDistribute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UcFilesDistribute.designer.cs">
+      <DependentUpon>UcFilesDistribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UCFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UCFolder.designer.cs">
+      <DependentUpon>UCFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFrequentlyFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFrequentlyFormEdit.designer.cs">
+      <DependentUpon>FrmFrequentlyFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IFileBoundShow.cs" />
+    <Compile Include="ISM\Forms\frmFilePropertys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ISM\Forms\frmFilePropertys.designer.cs">
+      <DependentUpon>frmFilePropertys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISM\Forms\frmImportFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ISM\Forms\frmImportFile.designer.cs">
+      <DependentUpon>frmImportFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISM\Forms\frmISMManageMent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ISM\Forms\frmISMManageMent.designer.cs">
+      <DependentUpon>frmISMManageMent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISM\Forms\UCISMFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ISM\Forms\UCISMFile.designer.cs">
+      <DependentUpon>UCISMFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISM\Forms\UCISMFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ISM\Forms\UCISMFolder.designer.cs">
+      <DependentUpon>UCISMFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FilePropertys.resx">
+      <DependentUpon>FilePropertys.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FileSearch.resx">
+      <DependentUpon>FileSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDocManagement.resx">
+      <DependentUpon>FrmDocManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFileBoundShow.resx">
+      <DependentUpon>frmFileBoundShow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFileReference.resx">
+      <DependentUpon>FrmFileReference.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFilesDistribute.resx">
+      <DependentUpon>FrmFilesDistribute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPropertyModify.resx">
+      <DependentUpon>frmPropertyModify.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportFile.resx">
+      <DependentUpon>ImportFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UCFile.resx">
+      <DependentUpon>UCFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UcFilesDistribute.resx">
+      <DependentUpon>UcFilesDistribute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UCFolder.resx">
+      <DependentUpon>UCFolder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFrequentlyFormEdit.resx">
+      <DependentUpon>FrmFrequentlyFormEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ISM\Forms\frmFilePropertys.resx">
+      <DependentUpon>frmFilePropertys.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ISM\Forms\frmImportFile.resx">
+      <DependentUpon>frmImportFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ISM\Forms\frmISMManageMent.resx">
+      <DependentUpon>frmISMManageMent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ISM\Forms\UCISMFile.resx">
+      <DependentUpon>UCISMFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ISM\Forms\UCISMFolder.resx">
+      <DependentUpon>UCISMFolder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseInfo\BaseInfo.csproj">
+      <Project>{71F49CE3-707D-409D-9796-48743BE13003}</Project>
+      <Name>BaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</Project>
+      <Name>CommonOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonViewer\CommonViewer.csproj">
+      <Project>{0AEB1FBC-6588-4EF9-8A44-A87597E71822}</Project>
+      <Name>CommonViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperationBase\FileOperationBase.csproj">
+      <Project>{E7C6132D-8312-4579-A384-2FCDB6C64E8C}</Project>
+      <Name>FileOperationBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

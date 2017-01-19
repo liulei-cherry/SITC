@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?define ProductName="LSShipMis_Ship.exe"?>
+<?define ProductDescription="海丰船舶管理系统4(船舶端)"?>
+<?define SourceDir="../LSShipMis_Ship"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <!--Product Id="8DF3CE51-4D81-43AC-B3AD-D75B4B33BD9D"-->
+  <Product Id="8417248C-C6E4-4EE2-9B70-EAC89F61D07D" Name="$(var.ProductDescription)" Codepage="UTF-8"
+       Language="2052" Version="4.8.1.0" Manufacturer="大连陆海科技股份有限公司"
+       UpgradeCode="A81726B0-7E8A-4DE6-ABF1-D0B49A9BA609">
+    <Package InstallerVersion="200" Compressed="yes" />
+    <Media Id="1" Cabinet="ExampleInstaller.cab" EmbedCab="yes" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <!-- 定义安装程序路径 -->
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="SECOND" Name="大连陆海科技股份有限公司" >
+          <Directory Id="INSTALLLOCATION" Name="$(var.ProductDescription)" />
+        </Directory>
+      </Directory>
+      <!-- 定义开始菜单的路径 -->
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="$(var.ProductDescription)"/>
+      </Directory>
+      <!--定义桌面快捷方式-->
+      <Directory Id="DesktopFolder" Name="Desktop"/>
+    </Directory>
+    <!-- 定义应用程序组件 -->
+    <DirectoryRef Id="INSTALLLOCATION">
+      <!--组件信息-->
+      <Component Id="$(var.ProductName)" Guid="4FD081A4-1B6C-4E96-B121-CC82EF32E52D">
+        <File Id="$(var.ProductName)" Source="$(var.SourceDir)/bin/$(var.BUILD)/$(var.ProductName)"/>
+        <File Id="BaseInfo.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/BaseInfo.dll"/>
+        <File Id="CMSManage.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/CMSManage.dll"/>
+        <File Id="CommonOperation.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/CommonOperation.dll"/>
+        <File Id="CommonViewer.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/CommonViewer.dll"/>
+        <File Id="Cost.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/Cost.dll"/>
+        <File Id="CustomerTable.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/CustomerTable.dll"/>
+        <File Id="FileOperation.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/FileOperation.dll"/>
+        <File Id="FileOperationBase.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/FileOperationBase.dll"/>
+        <File Id="ItemsManage.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/ItemsManage.dll"/>
+        <File Id="Maintenance.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/Maintenance.dll"/>
+        <File Id="Oil.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/Oil.dll"/>
+        <File Id="Repair.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/Repair.dll"/>
+        <File Id="SeaChartManage.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/SeaChartManage.dll"/>
+        <File Id="ShipCertification.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/ShipCertification.dll"/>
+        <File Id="ShipMisZHJ_WorkFlow.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/ShipMisZHJ_WorkFlow.dll"/>
+        <File Id="StorageManage.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/StorageManage.dll"/>
+        <File Id="ZedGraph.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/ZedGraph.dll"/>
+        <File Id="SynchDll.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/SynchDll.dll"/>
+        <File Id="GunterControl.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/GunterControl.dll"/>
+        <File Id="OfficeOperation.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/OfficeOperation.dll"/>
+        <File Id="BLToolkit.4.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/BLToolkit.4.dll"/>
+        <File Id="CustomerTable.resources.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/zh-CN/CustomerTable.resources.dll"/>
+        <!--NPOI-->
+        <File Id="NPOI.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/NPOI.dll"/>
+        <File Id="NPOI.OOXML.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/NPOI.OOXML.dll"/>
+        <File Id="NPOI.OpenXml4Net.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/NPOI.OpenXml4Net.dll"/>
+        <File Id="NPOI.OpenXmlFormats.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/NPOI.OpenXmlFormats.dll"/>
+        <!--devExpress-->
+        <File Id="DevExpress.Charts.v13.2.Core.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.Charts.v13.2.Core.dll"/>
+        <File Id="DevExpress.Data.v13.2.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.Data.v13.2.dll"/>
+        <File Id="DevExpress.Office.v13.2.Core.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.Office.v13.2.Core.dll"/>
+        <File Id="DevExpress.PivotGrid.v13.2.Core.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.PivotGrid.v13.2.Core.dll"/>
+        <File Id="DevExpress.Printing.v13.2.Core.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.Printing.v13.2.Core.dll"/>
+        <File Id="DevExpress.RichEdit.v13.2.Core.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.RichEdit.v13.2.Core.dll"/>
+        <File Id="DevExpress.Sparkline.v13.2.Core.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.Sparkline.v13.2.Core.dll"/>
+        <File Id="DevExpress.Utils.v13.2.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.Utils.v13.2.dll"/>
+        <File Id="DevExpress.XtraBars.v13.2.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraBars.v13.2.dll"/>
+        <File Id="DevExpress.XtraCharts.v13.2.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraCharts.v13.2.dll"/>
+        <File Id="DevExpress.XtraCharts.v13.2.UI.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraCharts.v13.2.UI.dll"/>
+        <File Id="DevExpress.XtraCharts.v13.2.Wizard.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraCharts.v13.2.Wizard.dll"/>
+        <File Id="DevExpress.XtraEditors.v13.2.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraEditors.v13.2.dll"/>
+        <File Id="DevExpress.XtraGrid.v13.2.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraGrid.v13.2.dll"/>
+        <File Id="DevExpress.XtraLayout.v13.2.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraLayout.v13.2.dll"/>
+        <File Id="DevExpress.XtraPrinting.v13.2.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraPrinting.v13.2.dll"/>
+        <File Id="DevExpress.XtraReports.v13.2.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraReports.v13.2.dll"/>
+        <File Id="DevExpress.XtraReports.v13.2.Extensions.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraReports.v13.2.Extensions.dll"/>
+        <File Id="DevExpress.XtraTreeList.v13.2.dll" Source="$(var.SourceDir)/bin/$(var.BUILD)/DevExpress.XtraTreeList.v13.2.dll"/>
+      </Component>
+      <!--文件信息-->
+      <Component Id="Files" Guid="0EDA099C-B3A3-4C80-BEC2-12A388B89D67">
+        <File Id="back.jpg" Source="$(var.SourceDir)/bin/$(var.BUILD)/back.jpg"/>
+        <File Id="sys.ico" Source="$(var.SourceDir)/bin/$(var.BUILD)/sys.ico"/>
+        <File Id="translate.xml" Source="$(var.SourceDir)/bin/$(var.BUILD)/translate.xml"/>
+        <File Id="FILE" Source="$(var.SourceDir)/bin/$(var.BUILD)/what'snew.txt"/>
+      </Component>
+      <!--升级程序-->
+      <Component Id="LoginFiles" Guid="B0B7BC60-8147-4C39-988C-ECBE59116E34">
+        <File Id="ShipLogin" Source="$(var.SourceDir)/bin/$(var.BUILD)/ShipLogin.exe"/>
+      </Component>
+    </DirectoryRef>
+    <!-- 定义快捷方式及卸载功能 -->
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="1AF2085B-BAC3-4A38-A6B9-7FAD48508381">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="$(var.ProductDescription)"
+                  Description="$(var.ProductDescription)"
+                  Target="[INSTALLLOCATION]$(var.ProductName)"
+                  WorkingDirectory="INSTALLLOCATION"/>
+        <Shortcut Id="UninstallProduct"
+                  Name="卸载"
+                  Description="卸载$(var.ProductDescription)"
+                  Target="[System64Folder]msiexec.exe"
+                  Arguments="/x [ProductCode]" Icon="uninstall">
+          <Icon Id="uninstall" SourceFile="Resources/uninstall.ico"/>
+        </Shortcut>
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\Microsoft\LandSea" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+    <!--桌面快捷方式-->
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="ApplicationShortcutDesktop" Guid="{38028B92-4CC6-4AD6-B53C-3FB317CC42BE}">
+        <Shortcut Id="DesktopShortcut"
+              Name="$(var.ProductDescription)"
+              Description="starts $(var.ProductName)"
+              Target="[INSTALLLOCATION]$(var.ProductName)"
+              WorkingDirectory="APPLICATIONROOTDIRECTORY"
+               />
+
+        <RegistryValue Root="HKCU" Key="Software\Landsea\$(var.ProductName)" Name="installedDesktopShortcut" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+    <!-- 安装项目的选择 -->
+    <Feature Id="ProductFeature" Title="安装选择" Level="1" ConfigurableDirectory="INSTALLLOCATION" TypicalDefault="install" >
+      <ComponentRef Id="$(var.ProductName)" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="Files" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+      <ComponentRef Id="LoginFiles" />
+    </Feature>
+    <UIRef Id="WixUI_Mondo"/>
+  </Product>
+</Wix>

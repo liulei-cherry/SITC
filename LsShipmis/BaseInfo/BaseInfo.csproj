@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71F49CE3-707D-409D-9796-48743BE13003}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseInfo</RootNamespace>
+    <AssemblyName>BaseInfo</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/BaseInfo/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OfficeOperation, Version=1.2.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllLibrary\ViewControlDll\OfficeOperation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClassServicesInterface\IItemServices.cs" />
+    <Compile Include="BaseClassServicesInterface\IStorageServices.cs" />
+    <Compile Include="BaseClassServicesInterface\ITaskServices.cs" />
+    <Compile Include="BaseClass\Item.cs" />
+    <Compile Include="BaseClass\Storage.cs" />
+    <Compile Include="BaseClass\Task.cs" />
+    <Compile Include="DataAccess\ArgumentSetService.cs" />
+    <Compile Include="DataAccess\CurrencyRateService.cs" />
+    <Compile Include="DataAccess\CurrencyService.cs" />
+    <Compile Include="DataAccess\DepartmentService.cs" />
+    <Compile Include="DataAccess\ManufacturerService.cs" />
+    <Compile Include="DataAccess\ManufacturerServiceMore.cs" />
+    <Compile Include="DataAccess\PortInfoService.cs" />
+    <Compile Include="DataAccess\PostService.cs" />
+    <Compile Include="DataAccess\RemindService.cs" />
+    <Compile Include="DataAccess\RemindServiceEx.cs" />
+    <Compile Include="DataAccess\ScheduleTypeService.cs" />
+    <Compile Include="DataAccess\ScheduleTypeServiceMore.cs" />
+    <Compile Include="DataAccess\ShipHoldService.cs" />
+    <Compile Include="DataAccess\ShipHoldServiceMore.cs" />
+    <Compile Include="DataAccess\ShipInfoService.cs" />
+    <Compile Include="DataAccess\ShipInfoServiceMore.cs" />
+    <Compile Include="DataAccess\ShipOilWareHouseService.cs" />
+    <Compile Include="DataAccess\ShipOilWareHouseServiceMore.cs" />
+    <Compile Include="DataAccess\ShipWareHouseService.cs" />
+    <Compile Include="DataAccess\SysUserService.cs" />
+    <Compile Include="DataAccess\VoyageService.cs" />
+    <Compile Include="DataAccess\WorkModelTypeService.cs" />
+    <Compile Include="DataAccess\WorkModelTypeServiceMore.cs" />
+    <Compile Include="DataAccess\CurrencyRateServiceMore.cs" />
+    <Compile Include="DataAccess\ArgumentSetServiceMore.cs" />
+    <Compile Include="Objects\ArgumentSet.cs" />
+    <Compile Include="Objects\Currency.cs" />
+    <Compile Include="Objects\CurrencyRate.cs" />
+    <Compile Include="Objects\Department.cs" />
+    <Compile Include="Objects\Manufacturer.cs" />
+    <Compile Include="Objects\PortInfo.cs" />
+    <Compile Include="Objects\Post.cs" />
+    <Compile Include="Objects\Remind.cs" />
+    <Compile Include="Objects\ScheduleType.cs" />
+    <Compile Include="Objects\ShipHold.cs" />
+    <Compile Include="Objects\ShipHoldMore.cs" />
+    <Compile Include="Objects\ShipInfo.cs" />
+    <Compile Include="Objects\ShipInfoMore.cs" />
+    <Compile Include="Objects\ShipOilWareHouse.cs" />
+    <Compile Include="Objects\ShipOilWareHouseMore.cs" />
+    <Compile Include="Objects\ShipWareHouse.cs" />
+    <Compile Include="Objects\T_SysUser.cs" />
+    <Compile Include="Objects\Voyage.cs" />
+    <Compile Include="Objects\WorkModelType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneManufacturer.Designer.cs">
+      <DependentUpon>FrmEditOneManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmArgumentSetEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmArgumentSetEdit.designer.cs">
+      <DependentUpon>FrmArgumentSetEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneShip.Designer.cs">
+      <DependentUpon>FrmEditOneShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditShipHold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditShipHold.Designer.cs">
+      <DependentUpon>FrmEditShipHold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditShipOilWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditShipOilWareHouse.Designer.cs">
+      <DependentUpon>FrmEditShipOilWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditStandardMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditStandardMoney.Designer.cs">
+      <DependentUpon>FrmEditStandardMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmArgumentSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmArgumentSet.designer.cs">
+      <DependentUpon>FrmArgumentSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmPortInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmPortInfo.designer.cs">
+      <DependentUpon>FrmPortInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmShipInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmShipInfo.designer.cs">
+      <DependentUpon>FrmShipInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmShipQuickSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmShipQuickSelect.Designer.cs">
+      <DependentUpon>FrmShipQuickSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmUserShip2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmUserShip2.designer.cs">
+      <DependentUpon>FrmUserShip2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcManufacturer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcManufacturer.Designer.cs">
+      <DependentUpon>UcManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcManufacturerSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcManufacturerSelect.Designer.cs">
+      <DependentUpon>UcManufacturerSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcShipHold.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcShipHold.Designer.cs">
+      <DependentUpon>UcShipHold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcShipInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcShipInfo.Designer.cs">
+      <DependentUpon>UcShipInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcShipSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcShipSelect.Designer.cs">
+      <DependentUpon>UcShipSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcOilWareHouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcOilWareHouse.Designer.cs">
+      <DependentUpon>UcOilWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcPost.Designer.cs">
+      <DependentUpon>UcPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOnePost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOnePost.Designer.cs">
+      <DependentUpon>FrmEditOnePost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmPostInfoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmPostInfoSelect.Designer.cs">
+      <DependentUpon>FrmPostInfoSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcPostSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcPostSelect.Designer.cs">
+      <DependentUpon>UcPostSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOnePort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOnePort.Designer.cs">
+      <DependentUpon>FrmEditOnePort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcPort.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcPort.Designer.cs">
+      <DependentUpon>UcPort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmPortInfoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmPortInfoSelect.Designer.cs">
+      <DependentUpon>FrmPortInfoSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcPortSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcPortSelect.Designer.cs">
+      <DependentUpon>UcPortSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmPostInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmPostInfo.designer.cs">
+      <DependentUpon>FrmPostInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmShipWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmShipWareHouse.designer.cs">
+      <DependentUpon>FrmShipWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcShipWareHouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcShipWareHouse.Designer.cs">
+      <DependentUpon>UcShipWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneShipWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneShipWareHouse.Designer.cs">
+      <DependentUpon>FrmEditOneShipWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmManufacturer.designer.cs">
+      <DependentUpon>FrmManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcDepartment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcDepartment.Designer.cs">
+      <DependentUpon>UcDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneDepartment.Designer.cs">
+      <DependentUpon>FrmEditOneDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmDepartment.designer.cs">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcVoyage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcVoyage.Designer.cs">
+      <DependentUpon>UcVoyage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneVoyage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneVoyage.Designer.cs">
+      <DependentUpon>FrmEditOneVoyage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmVoyage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmVoyage.designer.cs">
+      <DependentUpon>FrmVoyage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcDepartmentSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcDepartmentSelect.Designer.cs">
+      <DependentUpon>UcDepartmentSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcCurrency.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcCurrency.Designer.cs">
+      <DependentUpon>UcCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCurrency.designer.cs">
+      <DependentUpon>FrmCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCurrency.Designer.cs">
+      <DependentUpon>FrmEditOneCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcCurrencyRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcCurrencyRate.Designer.cs">
+      <DependentUpon>UcCurrencyRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCurrencyRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCurrencyRate.Designer.cs">
+      <DependentUpon>FrmEditOneCurrencyRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCurrencyRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCurrencyRate.designer.cs">
+      <DependentUpon>FrmCurrencyRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcCurrencySelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcCurrencySelect.Designer.cs">
+      <DependentUpon>UcCurrencySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcShipWareHouseSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcShipWareHouseSelect.Designer.cs">
+      <DependentUpon>UcShipWareHouseSelect.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</Project>
+      <Name>CommonOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonViewer\CommonViewer.csproj">
+      <Project>{0AEB1FBC-6588-4EF9-8A44-A87597E71822}</Project>
+      <Name>CommonViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperationBase\FileOperationBase.csproj">
+      <Project>{E7C6132D-8312-4579-A384-2FCDB6C64E8C}</Project>
+      <Name>FileOperationBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneManufacturer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmEditOneManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmArgumentSetEdit.resx">
+      <DependentUpon>FrmArgumentSetEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneShip.resx">
+      <DependentUpon>FrmEditOneShip.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditShipHold.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmEditShipHold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditShipOilWareHouse.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmEditShipOilWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditStandardMoney.resx">
+      <DependentUpon>FrmEditStandardMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmArgumentSet.resx">
+      <DependentUpon>FrmArgumentSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmPortInfo.resx">
+      <DependentUpon>FrmPortInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmShipInfo.resx">
+      <DependentUpon>FrmShipInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmShipQuickSelect.resx">
+      <DependentUpon>FrmShipQuickSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmUserShip2.resx">
+      <DependentUpon>FrmUserShip2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcManufacturer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcManufacturerSelect.resx">
+      <DependentUpon>UcManufacturerSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcShipHold.resx">
+      <DependentUpon>UcShipHold.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcShipInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcShipInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcOilWareHouse.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcOilWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcPost.resx">
+      <DependentUpon>UcPost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOnePost.resx">
+      <DependentUpon>FrmEditOnePost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmPostInfoSelect.resx">
+      <DependentUpon>FrmPostInfoSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOnePort.resx">
+      <DependentUpon>FrmEditOnePort.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcPort.resx">
+      <DependentUpon>UcPort.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmPortInfoSelect.resx">
+      <DependentUpon>FrmPortInfoSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmPostInfo.resx">
+      <DependentUpon>FrmPostInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmShipWareHouse.resx">
+      <DependentUpon>FrmShipWareHouse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcShipSelect.resx">
+      <DependentUpon>UcShipSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcShipWareHouse.resx">
+      <DependentUpon>UcShipWareHouse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneShipWareHouse.resx">
+      <DependentUpon>FrmEditOneShipWareHouse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmManufacturer.resx">
+      <DependentUpon>FrmManufacturer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcDepartment.resx">
+      <DependentUpon>UcDepartment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneDepartment.resx">
+      <DependentUpon>FrmEditOneDepartment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmDepartment.resx">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcVoyage.resx">
+      <DependentUpon>UcVoyage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneVoyage.resx">
+      <DependentUpon>FrmEditOneVoyage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmVoyage.resx">
+      <DependentUpon>FrmVoyage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcCurrency.resx">
+      <DependentUpon>UcCurrency.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCurrency.resx">
+      <DependentUpon>FrmCurrency.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneCurrency.resx">
+      <DependentUpon>FrmEditOneCurrency.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcCurrencyRate.resx">
+      <DependentUpon>UcCurrencyRate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneCurrencyRate.resx">
+      <DependentUpon>FrmEditOneCurrencyRate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCurrencyRate.resx">
+      <DependentUpon>FrmCurrencyRate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+    <None Include="Resources\船舶基本信息.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

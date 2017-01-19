@@ -1,0 +1,10 @@
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\CommonOperation\bin\Debug\CommonOperation.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\CommonOperation\bin\Debug\CommonOperation.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\CommonOperation\obj\Debug\CommonOperation.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\CommonOperation\obj\Debug\CommonOperation.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\CommonOperation\obj\Debug\CommonOperation.csprojResolveAssemblyReference.cache
+D:\gitworkspace\SITCVer20170119\LsShipmis\CommonOperation\bin\Debug\CommonOperation.dll
+D:\gitworkspace\SITCVer20170119\LsShipmis\CommonOperation\bin\Debug\CommonOperation.pdb
+D:\gitworkspace\SITCVer20170119\LsShipmis\CommonOperation\obj\Debug\CommonOperation.csprojResolveAssemblyReference.cache
+D:\gitworkspace\SITCVer20170119\LsShipmis\CommonOperation\obj\Debug\CommonOperation.dll
+D:\gitworkspace\SITCVer20170119\LsShipmis\CommonOperation\obj\Debug\CommonOperation.pdb

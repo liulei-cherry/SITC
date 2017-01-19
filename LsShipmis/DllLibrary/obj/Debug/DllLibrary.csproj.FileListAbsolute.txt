@@ -1,0 +1,14 @@
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\bin\Debug\DllLibrary.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\bin\Debug\DllLibrary.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\bin\Debug\OfficeOperation.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\bin\Debug\OfficeOperation.xml
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\obj\Debug\DllLibrary.dll
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\obj\Debug\DllLibrary.pdb
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\DllLibrary\obj\Debug\DllLibrary.csprojResolveAssemblyReference.cache
+D:\gitworkspace\SITCVer20170119\LsShipmis\DllLibrary\bin\Debug\DllLibrary.dll
+D:\gitworkspace\SITCVer20170119\LsShipmis\DllLibrary\bin\Debug\DllLibrary.pdb
+D:\gitworkspace\SITCVer20170119\LsShipmis\DllLibrary\bin\Debug\OfficeOperation.dll
+D:\gitworkspace\SITCVer20170119\LsShipmis\DllLibrary\bin\Debug\OfficeOperation.xml
+D:\gitworkspace\SITCVer20170119\LsShipmis\DllLibrary\obj\Debug\DllLibrary.csprojResolveAssemblyReference.cache
+D:\gitworkspace\SITCVer20170119\LsShipmis\DllLibrary\obj\Debug\DllLibrary.dll
+D:\gitworkspace\SITCVer20170119\LsShipmis\DllLibrary\obj\Debug\DllLibrary.pdb

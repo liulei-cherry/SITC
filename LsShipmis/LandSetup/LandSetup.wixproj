@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.7</ProductVersion>
+    <ProjectGuid>c53eeb4a-5ffd-4abe-8118-80a7faf23fbf</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>LandSetup</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <SccAuxPath />
+    <SccLocalPath>..</SccLocalPath>
+    <SccProjectName>"$/上海海丰/04源代码/上海海丰/LsShipmis", ALAIAAAA</SccProjectName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug;BUILD=Release</DefineConstants>
+    <WixVariables>WixUILicenseRtf=Resources/GPL3.rtf;WixUIDialogBmp=Resources/bigback.bmp;WixUIBannerBmp=Resources/banner.bmp</WixVariables>
+    <Cultures>zh-cn</Cultures>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>BUILD=Release</DefineConstants>
+    <WixVariables>WixUILicenseRtf=Resources/GPL3.rtf;WixUIDialogBmp=Resources/bigback.bmp;WixUIBannerBmp=Resources/banner.bmp</WixVariables>
+    <Cultures>zh-cn</Cultures>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\banner.bmp" />
+    <Content Include="Resources\bigback.bmp" />
+    <Content Include="Resources\GPL3.rtf" />
+    <Content Include="Resources\uninstall.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Product.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <PropertyGroup>
+    <PreBuildEvent>%25WINDIR%25\Microsoft.NET\Framework\v4.0.30319\MsBuild.exe /t:Rebuild  $(SolutionDir)\LSShipMis_Land\LSShipMis_Land.csproj /p:Configuration=Release /t:Clean</PreBuildEvent>
+  </PropertyGroup>
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

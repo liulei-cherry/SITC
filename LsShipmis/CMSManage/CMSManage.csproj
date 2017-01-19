@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C60CF8F1-A150-4161-B40D-4BDCBB6C2A43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMSManage</RootNamespace>
+    <AssemblyName>CMSManage</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GunterControl, Version=1.0.4563.19569, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllLibrary\ViewControlDll\GunterControl.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeOperation, Version=1.2.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllLibrary\ViewControlDll\OfficeOperation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataObject\CMSCheck.cs" />
+    <Compile Include="DataObject\CMSCheckLog.cs" />
+    <Compile Include="DataObject\CMSConfig.cs" />
+    <Compile Include="DataObject\CMSRectify.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CMSCheckLogService.cs" />
+    <Compile Include="Services\CMSCheckService.cs" />
+    <Compile Include="Services\CMSConfigService.cs" />
+    <Compile Include="Services\CMSRectifyService.cs" />
+    <Compile Include="Viewer\FrmCMSCheckAddFlaw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSCheckAddFlaw.Designer.cs">
+      <DependentUpon>FrmCMSCheckAddFlaw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSDateSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSDateSetting.Designer.cs">
+      <DependentUpon>FrmCMSDateSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSWorkInfoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSWorkInfoSelect.Designer.cs">
+      <DependentUpon>FrmCMSWorkInfoSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCMSConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCMSConfig.Designer.cs">
+      <DependentUpon>FrmEditOneCMSConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSConfig.designer.cs">
+      <DependentUpon>FrmCMSConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSetSelfCheckItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSetSelfCheckItems.Designer.cs">
+      <DependentUpon>FrmSetSelfCheckItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcCMSConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcCMSConfig.Designer.cs">
+      <DependentUpon>UcCMSConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSSelfChecking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSSelfChecking.Designer.cs">
+      <DependentUpon>FrmCMSSelfChecking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSHistory.Designer.cs">
+      <DependentUpon>FrmCMSHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSocietyChecking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSocietyChecking.Designer.cs">
+      <DependentUpon>FrmSocietyChecking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcCMSCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcCMSCheck.Designer.cs">
+      <DependentUpon>UcCMSCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCMSCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCMSCheck.Designer.cs">
+      <DependentUpon>FrmEditOneCMSCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSRectify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCMSRectify.Designer.cs">
+      <DependentUpon>FrmCMSRectify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\UcCMSRectify.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\UcCMSRectify.Designer.cs">
+      <DependentUpon>UcCMSRectify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCMSRectify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmEditOneCMSRectify.Designer.cs">
+      <DependentUpon>FrmEditOneCMSRectify.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseInfo\BaseInfo.csproj">
+      <Project>{71F49CE3-707D-409D-9796-48743BE13003}</Project>
+      <Name>BaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</Project>
+      <Name>CommonOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonViewer\CommonViewer.csproj">
+      <Project>{0AEB1FBC-6588-4EF9-8A44-A87597E71822}</Project>
+      <Name>CommonViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperationBase\FileOperationBase.csproj">
+      <Project>{E7C6132D-8312-4579-A384-2FCDB6C64E8C}</Project>
+      <Name>FileOperationBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperation\FileOperation.csproj">
+      <Project>{507F1A26-A810-448D-B49B-97D68D7B6EAC}</Project>
+      <Name>FileOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemsManage\ItemsManage.csproj">
+      <Project>{982FE57C-67B8-49E3-B7D0-A31B869C7584}</Project>
+      <Name>ItemsManage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Maintenance\Maintenance.csproj">
+      <Project>{4B1A8C51-9639-4461-BC21-0CA009C4585D}</Project>
+      <Name>Maintenance</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCMSCheckAddFlaw.resx">
+      <DependentUpon>FrmCMSCheckAddFlaw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCMSDateSetting.resx">
+      <DependentUpon>FrmCMSDateSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCMSWorkInfoSelect.resx">
+      <DependentUpon>FrmCMSWorkInfoSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneCMSConfig.resx">
+      <DependentUpon>FrmEditOneCMSConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCMSConfig.resx">
+      <DependentUpon>FrmCMSConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSetSelfCheckItems.resx">
+      <DependentUpon>FrmSetSelfCheckItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcCMSConfig.resx">
+      <DependentUpon>UcCMSConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCMSSelfChecking.resx">
+      <DependentUpon>FrmCMSSelfChecking.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCMSHistory.resx">
+      <DependentUpon>FrmCMSHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSocietyChecking.resx">
+      <DependentUpon>FrmSocietyChecking.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcCMSCheck.resx">
+      <DependentUpon>UcCMSCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneCMSCheck.resx">
+      <DependentUpon>FrmEditOneCMSCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCMSRectify.resx">
+      <DependentUpon>FrmCMSRectify.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\UcCMSRectify.resx">
+      <DependentUpon>UcCMSRectify.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmEditOneCMSRectify.resx">
+      <DependentUpon>FrmEditOneCMSRectify.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

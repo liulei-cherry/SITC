@@ -1,0 +1,617 @@
+﻿namespace Repair.Viewer
+{
+    partial class FrmRepairDelegateEdit
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRepairDelegateEdit));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSave = new CommonViewer.ButtonEx();
+            this.buttonEx2 = new CommonViewer.ButtonEx();
+            this.btnClose = new CommonViewer.ButtonEx();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dgvApply = new CommonViewer.UcDataGridView(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvDetail = new CommonViewer.UcDataGridView(this.components);
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtARRANGEDPERSON = new CommonViewer.TextBoxEx();
+            this.txtREMARK = new CommonViewer.TextBoxEx();
+            this.ucRepairPortSelect1 = new BaseInfo.Viewer.UcPortSelect();
+            this.ucManufacturerSelect1 = new BaseInfo.Viewer.UcManufacturerSelect();
+            this.dtpREPAIRDATE = new CommonViewer.DateTimePickerEx();
+            this.ucShipSelect1 = new BaseInfo.Viewer.UcShipSelect();
+            this.panel4.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApply)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel2.SetColumnSpan(this.panel4, 3);
+            this.panel4.Controls.Add(this.btnSave);
+            this.panel4.Controls.Add(this.buttonEx2);
+            this.panel4.Controls.Add(this.btnClose);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(6);
+            this.panel4.Size = new System.Drawing.Size(1080, 55);
+            this.panel4.TabIndex = 11;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Arrow = CommonViewer.ButtonEx.e_arrow.None;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.ColorBase = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(209)))), ((int)(((byte)(240)))));
+            this.btnSave.ColorBaseStroke = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
+            this.btnSave.ColorOn = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(78)))));
+            this.btnSave.ColorOnStroke = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(177)))), ((int)(((byte)(118)))));
+            this.btnSave.ColorPress = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSave.ColorPressStroke = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSave.FadingSpeed = 20;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSave.GroupPos = CommonViewer.ButtonEx.e_groupPos.None;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageLocation = CommonViewer.ButtonEx.e_imagelocation.Left;
+            this.btnSave.ImageOffset = 7;
+            this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSave.IsPressed = false;
+            this.btnSave.KeepPress = false;
+            this.btnSave.Location = new System.Drawing.Point(944, 6);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSave.MaxImageSize = new System.Drawing.Point(0, 0);
+            this.btnSave.MenuPos = new System.Drawing.Point(0, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Radius = 6;
+            this.btnSave.ShowBase = true;
+            this.btnSave.Size = new System.Drawing.Size(88, 43);
+            this.btnSave.SplitButton = CommonViewer.ButtonEx.e_splitbutton.No;
+            this.btnSave.SplitDistance = 0;
+            this.btnSave.TabIndex = 38;
+            this.btnSave.Text = "保存";
+            this.btnSave.Title = "";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // buttonEx2
+            // 
+            this.buttonEx2.Arrow = CommonViewer.ButtonEx.e_arrow.None;
+            this.buttonEx2.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx2.ColorBase = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(209)))), ((int)(((byte)(240)))));
+            this.buttonEx2.ColorBaseStroke = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
+            this.buttonEx2.ColorOn = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(78)))));
+            this.buttonEx2.ColorOnStroke = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(177)))), ((int)(((byte)(118)))));
+            this.buttonEx2.ColorPress = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonEx2.ColorPressStroke = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttonEx2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonEx2.Enabled = false;
+            this.buttonEx2.FadingSpeed = 20;
+            this.buttonEx2.FlatAppearance.BorderSize = 0;
+            this.buttonEx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx2.Font = new System.Drawing.Font("微软雅黑", 13F);
+            this.buttonEx2.GroupPos = CommonViewer.ButtonEx.e_groupPos.None;
+            this.buttonEx2.Image = ((System.Drawing.Image)(resources.GetObject("buttonEx2.Image")));
+            this.buttonEx2.ImageLocation = CommonViewer.ButtonEx.e_imagelocation.Left;
+            this.buttonEx2.ImageOffset = 3;
+            this.buttonEx2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonEx2.IsPressed = false;
+            this.buttonEx2.KeepPress = false;
+            this.buttonEx2.Location = new System.Drawing.Point(6, 6);
+            this.buttonEx2.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEx2.MaxImageSize = new System.Drawing.Point(0, 0);
+            this.buttonEx2.MenuPos = new System.Drawing.Point(0, 0);
+            this.buttonEx2.Name = "buttonEx2";
+            this.buttonEx2.Radius = 6;
+            this.buttonEx2.ShowBase = false;
+            this.buttonEx2.Size = new System.Drawing.Size(314, 43);
+            this.buttonEx2.SplitButton = CommonViewer.ButtonEx.e_splitbutton.No;
+            this.buttonEx2.SplitDistance = 0;
+            this.buttonEx2.TabIndex = 23;
+            this.buttonEx2.Text = "修理委托维护";
+            this.buttonEx2.Title = "";
+            this.buttonEx2.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Arrow = CommonViewer.ButtonEx.e_arrow.None;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.ColorBase = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(209)))), ((int)(((byte)(240)))));
+            this.btnClose.ColorBaseStroke = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
+            this.btnClose.ColorOn = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(78)))));
+            this.btnClose.ColorOnStroke = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(177)))), ((int)(((byte)(118)))));
+            this.btnClose.ColorPress = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnClose.ColorPressStroke = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FadingSpeed = 20;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.GroupPos = CommonViewer.ButtonEx.e_groupPos.None;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageLocation = CommonViewer.ButtonEx.e_imagelocation.Left;
+            this.btnClose.ImageOffset = 6;
+            this.btnClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnClose.IsPressed = false;
+            this.btnClose.KeepPress = false;
+            this.btnClose.Location = new System.Drawing.Point(1032, 6);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.MaxImageSize = new System.Drawing.Point(0, 0);
+            this.btnClose.MenuPos = new System.Drawing.Point(0, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Radius = 6;
+            this.btnClose.ShowBase = true;
+            this.btnClose.Size = new System.Drawing.Size(42, 43);
+            this.btnClose.SplitButton = CommonViewer.ButtonEx.e_splitbutton.No;
+            this.btnClose.SplitDistance = 0;
+            this.btnClose.TabIndex = 40;
+            this.btnClose.Title = "";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.bdNgClose_Click);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox1, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnAdd, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnDel, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 7;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 137F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1080, 577);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dgvApply);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(3, 145);
+            this.groupBox3.Name = "groupBox3";
+            this.tableLayoutPanel2.SetRowSpan(this.groupBox3, 5);
+            this.groupBox3.Size = new System.Drawing.Size(510, 429);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "未委托修理申请";
+            // 
+            // dgvApply
+            // 
+            this.dgvApply.AllowUserToAddRows = false;
+            this.dgvApply.AllowUserToDeleteRows = false;
+            this.dgvApply.AllowUserToOrderColumns = true;
+            this.dgvApply.AutoFit = true;
+            this.dgvApply.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dgvApply.ColumnDeep = 1;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApply.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvApply.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvApply.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvApply.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvApply.EnableHeadersVisualStyles = false;
+            this.dgvApply.ExportColorToExcel = false;
+            this.dgvApply.Footer = ((System.Collections.Generic.List<string>)(resources.GetObject("dgvApply.Footer")));
+            this.dgvApply.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgvApply.Header = ((System.Collections.Generic.List<string>)(resources.GetObject("dgvApply.Header")));
+            this.dgvApply.LoadedFinish = false;
+            this.dgvApply.Location = new System.Drawing.Point(3, 17);
+            this.dgvApply.MergeColumnNames = ((System.Collections.Generic.List<string>)(resources.GetObject("dgvApply.MergeColumnNames")));
+            this.dgvApply.MergeRowColumn = ((System.Collections.Generic.List<string>)(resources.GetObject("dgvApply.MergeRowColumn")));
+            this.dgvApply.Name = "dgvApply";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApply.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvApply.RowHeadersWidth = 25;
+            this.dgvApply.RowTemplate.Height = 23;
+            this.dgvApply.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvApply.ShowRowNumber = false;
+            this.dgvApply.Size = new System.Drawing.Size(504, 409);
+            this.dgvApply.TabIndex = 11;
+            this.dgvApply.Title = "";
+            this.dgvApply.SelectedChanged += new CommonViewer.UcDataGridView.DeleSelectedChanged(this.dgvApply_SelectedChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvDetail);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(566, 145);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(8, 3, 8, 8);
+            this.tableLayoutPanel2.SetRowSpan(this.groupBox1, 5);
+            this.groupBox1.Size = new System.Drawing.Size(511, 429);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "委托单详细列表";
+            // 
+            // dgvDetail
+            // 
+            this.dgvDetail.AllowUserToAddRows = false;
+            this.dgvDetail.AllowUserToDeleteRows = false;
+            this.dgvDetail.AllowUserToOrderColumns = true;
+            this.dgvDetail.AutoFit = true;
+            this.dgvDetail.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dgvDetail.ColumnDeep = 1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetail.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDetail.EnableHeadersVisualStyles = false;
+            this.dgvDetail.ExportColorToExcel = false;
+            this.dgvDetail.Footer = ((System.Collections.Generic.List<string>)(resources.GetObject("dgvDetail.Footer")));
+            this.dgvDetail.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgvDetail.Header = ((System.Collections.Generic.List<string>)(resources.GetObject("dgvDetail.Header")));
+            this.dgvDetail.LoadedFinish = false;
+            this.dgvDetail.Location = new System.Drawing.Point(8, 17);
+            this.dgvDetail.MergeColumnNames = ((System.Collections.Generic.List<string>)(resources.GetObject("dgvDetail.MergeColumnNames")));
+            this.dgvDetail.MergeRowColumn = ((System.Collections.Generic.List<string>)(resources.GetObject("dgvDetail.MergeRowColumn")));
+            this.dgvDetail.Name = "dgvDetail";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetail.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvDetail.RowHeadersWidth = 25;
+            this.dgvDetail.RowTemplate.Height = 23;
+            this.dgvDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDetail.ShowRowNumber = false;
+            this.dgvDetail.Size = new System.Drawing.Size(495, 404);
+            this.dgvDetail.TabIndex = 11;
+            this.dgvDetail.Title = "";
+            this.dgvDetail.SelectedChanged += new CommonViewer.UcDataGridView.DeleSelectedChanged(this.dgvDetail_SelectedChanged);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(519, 282);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(41, 23);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = ">>";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(519, 377);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(41, 23);
+            this.btnDel.TabIndex = 16;
+            this.btnDel.Text = "<<";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // groupBox2
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.groupBox2, 3);
+            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(3, 58);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1074, 81);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "委托信息";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.58052F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.01498F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.456929F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.04494F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.39326F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.1527F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.928839F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.25468F));
+            this.tableLayoutPanel1.Controls.Add(this.label2, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtARRANGEDPERSON, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtREMARK, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ucRepairPortSelect1, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ucManufacturerSelect1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dtpREPAIRDATE, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ucShipSelect1, 3, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 17);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1068, 61);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(506, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "修理港口*";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(255, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 31);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "船舶名称*";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(255, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 34);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "服务商*";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Location = new System.Drawing.Point(768, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 31);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "备注";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(3, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 34);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "修理开始日期*";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 31);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "安排人*";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtARRANGEDPERSON
+            // 
+            this.txtARRANGEDPERSON.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtARRANGEDPERSON.Location = new System.Drawing.Point(116, 3);
+            this.txtARRANGEDPERSON.Name = "txtARRANGEDPERSON";
+            this.txtARRANGEDPERSON.ReadOnly = true;
+            this.txtARRANGEDPERSON.Size = new System.Drawing.Size(133, 21);
+            this.txtARRANGEDPERSON.TabIndex = 4;
+            // 
+            // txtREMARK
+            // 
+            this.txtREMARK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtREMARK.Location = new System.Drawing.Point(842, 3);
+            this.txtREMARK.Multiline = true;
+            this.txtREMARK.Name = "txtREMARK";
+            this.tableLayoutPanel1.SetRowSpan(this.txtREMARK, 2);
+            this.txtREMARK.Size = new System.Drawing.Size(223, 59);
+            this.txtREMARK.TabIndex = 7;
+            // 
+            // ucRepairPortSelect1
+            // 
+            this.ucRepairPortSelect1.CanEdit = true;
+            this.ucRepairPortSelect1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucRepairPortSelect1.DropDownWidth = 145;
+            this.ucRepairPortSelect1.Location = new System.Drawing.Point(617, 3);
+            this.ucRepairPortSelect1.MaximumSize = new System.Drawing.Size(2000, 20);
+            this.ucRepairPortSelect1.MinimumSize = new System.Drawing.Size(60, 20);
+            this.ucRepairPortSelect1.Name = "ucRepairPortSelect1";
+            this.ucRepairPortSelect1.NullValueShow = "";
+            this.ucRepairPortSelect1.ShowButton = true;
+            this.ucRepairPortSelect1.Size = new System.Drawing.Size(145, 20);
+            this.ucRepairPortSelect1.TabIndex = 3;
+            // 
+            // ucManufacturerSelect1
+            // 
+            this.ucManufacturerSelect1.CanEdit = true;
+            this.ucManufacturerSelect1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucManufacturerSelect1.DropDownWidth = 350;
+            this.ucManufacturerSelect1.Location = new System.Drawing.Point(356, 34);
+            this.ucManufacturerSelect1.MaximumSize = new System.Drawing.Size(2000, 20);
+            this.ucManufacturerSelect1.MinimumSize = new System.Drawing.Size(60, 20);
+            this.ucManufacturerSelect1.Name = "ucManufacturerSelect1";
+            this.ucManufacturerSelect1.NullValueShow = "";
+            this.ucManufacturerSelect1.ShowButton = true;
+            this.ucManufacturerSelect1.Size = new System.Drawing.Size(144, 20);
+            this.ucManufacturerSelect1.TabIndex = 5;
+            // 
+            // dtpREPAIRDATE
+            // 
+            this.dtpREPAIRDATE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpREPAIRDATE.Location = new System.Drawing.Point(116, 34);
+            this.dtpREPAIRDATE.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.dtpREPAIRDATE.MaxValue = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpREPAIRDATE.MimValue = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpREPAIRDATE.Name = "dtpREPAIRDATE";
+            this.dtpREPAIRDATE.ReadOnly = false;
+            this.dtpREPAIRDATE.Size = new System.Drawing.Size(133, 31);
+            this.dtpREPAIRDATE.TabIndex = 9;
+            this.dtpREPAIRDATE.Value = new System.DateTime(((long)(0)));
+            // 
+            // ucShipSelect1
+            // 
+            this.ucShipSelect1.CanEdit = false;
+            this.ucShipSelect1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucShipSelect1.DropDownWidth = 144;
+            this.ucShipSelect1.Location = new System.Drawing.Point(356, 3);
+            this.ucShipSelect1.MaximumSize = new System.Drawing.Size(2000, 20);
+            this.ucShipSelect1.MinimumSize = new System.Drawing.Size(60, 20);
+            this.ucShipSelect1.Name = "ucShipSelect1";
+            this.ucShipSelect1.NullValueShow = "所有船";
+            this.ucShipSelect1.ShowButton = true;
+            this.ucShipSelect1.Size = new System.Drawing.Size(144, 20);
+            this.ucShipSelect1.TabIndex = 10;
+            this.ucShipSelect1.TheSelectedChanged += new CommonViewer.BaseControl.ComboxEx.ObjectChanged(this.ucShipSelect1_TheSelectedChanged);
+            // 
+            // FrmRepairDelegateEdit
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1080, 577);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Name = "FrmRepairDelegateEdit";
+            this.Text = "修理委托维护";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmRepairApply_FormClosing);
+            this.Load += new System.EventHandler(this.FrmRepairDelegateEdit_Load);
+            this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApply)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        protected System.Windows.Forms.Panel panel4;
+        public CommonViewer.ButtonEx btnSave;
+        public CommonViewer.ButtonEx buttonEx2;
+        protected CommonViewer.ButtonEx btnClose;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private CommonViewer.UcDataGridView dgvDetail;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private CommonViewer.UcDataGridView dgvApply;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private CommonViewer.TextBoxEx txtARRANGEDPERSON;
+        private CommonViewer.TextBoxEx txtREMARK;
+        private BaseInfo.Viewer.UcPortSelect ucRepairPortSelect1;
+        private BaseInfo.Viewer.UcManufacturerSelect ucManufacturerSelect1;
+        private CommonViewer.DateTimePickerEx dtpREPAIRDATE;
+        private BaseInfo.Viewer.UcShipSelect ucShipSelect1;
+
+    }
+}

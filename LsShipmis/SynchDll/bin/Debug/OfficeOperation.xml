@@ -1,0 +1,1245 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OfficeOperation</name>
+    </assembly>
+    <members>
+        <member name="T:OfficeOperation.Excel">
+            <summary>
+            利用反射机制操作各版本Excel的基本操作类，未进行封装，推荐使用【OperationExcel】类进行操作。
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.Excel.UID">
+            <summary>
+            固定的常量
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetWindowThreadProcessId(System.IntPtr,System.Int32@)">
+            <summary>
+            得到此Excel在windows线程中的id
+            </summary>
+            <param name="hwnd"></param>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.release(System.IntPtr)">
+            <summary>
+            释放当前handle对应的对象
+            </summary>
+            <param name="pt"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.OpenDocument(System.String)">
+            <summary>
+            打开指定文档.
+            </summary>
+            <param name="name">文件名</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.NewDocument">
+            <summary>
+            新生成一个文件.
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.CloseDocument">
+            <summary>
+            关闭当前文档.
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.SaveDocument(System.String)">
+            <summary>
+            保存某个文档.
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.DeleteRange(System.String)">
+            <summary>
+            删除某个区域.
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.ClearCurrentWorkSheet">
+            <summary>
+            清空当前区域.
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetOrientation(OfficeOperation.XlPageOrientation)">
+            <summary>
+            设置纸张方向(横向或纵向).
+            </summary>
+            <param name="Orientation"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetMargin(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            设置页边距.
+            </summary>
+            <param name="Left"></param>
+            <param name="Right"></param>
+            <param name="Top"></param>
+            <param name="Bottom"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetPaperSize(OfficeOperation.xlPaperSize)">
+            <summary>
+            设置纸张大小
+            </summary>
+            <param name="Size">大小</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetZoom(System.Int32)">
+            <summary>
+            放大缩小
+            </summary>
+            <param name="Percent">百分比</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.ReNamePage(System.Int32,System.String)">
+            <summary>
+            更改页名
+            </summary>
+            <param name="n">第几页</param>
+            <param name="Name">新名称</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.AddNewPage(System.String)">
+            <summary>
+            插入一个新页
+            </summary>
+            <param name="Name">页名</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetValue(System.String,System.String)">
+            <summary>
+            为指定区域赋值.
+            </summary>
+            <param name="range"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetTableValue(System.String,System.String[0:,0:])">
+            <summary>
+            给指定区域快速插入一个二维数组.
+            实现快速填充内容.
+            </summary>
+            <param name="range">区域</param>
+            <param name="values">二维值数组</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.ClearContents(System.String)">
+            <summary>
+            删除内容
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetMerge(System.String,System.Boolean)">
+            <summary>
+            合并单元格
+            </summary>
+            <param name="range">合并区域</param>
+            <param name="MergeCells">是否合并单元格</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetColumnWidth(System.String,System.Double)">
+            <summary>
+            设置列宽度
+            </summary>
+            <param name="range">列range</param>
+            <param name="Width">宽度</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetTextOrientation(System.String,System.Int32)">
+            <summary>
+            设置文字方向
+            </summary>
+            <param name="range">区域</param>
+            <param name="Orientation">方向</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetTextHorizontalAlignment(System.String,OfficeOperation.XlHorizontalAlignment)">
+            <summary>
+            区域内容纵向对齐
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetWrapText(System.String,System.Boolean)">
+            <summary>
+            设置自动换行
+            </summary>
+            <param name="range"></param>
+            <param name="Value"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetRowHeight(System.Int32,System.Double)">
+            <summary>
+            设置行高
+            </summary>
+            <param name="rowNo"></param>
+            <param name="Height"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetBorderStyle(System.String)">
+            <summary>
+            给指定区域设置全部border(相当于选择目标区域,点击田字格)
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetRangeBorder(System.String,OfficeOperation.XlBordersIndex,OfficeOperation.XlLineStyle,OfficeOperation.XlBorderWeight)">
+            <summary>
+            给指定区域设置指定的border,线形,线宽
+            </summary>
+            <param name="range">指定区域</param>
+            <param name="index">指定的外框</param>
+            <param name="lineStyle">线形</param>
+            <param name="weight">线宽</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetBorderBottomLine(System.String)">
+             <summary>
+             设置表格的下划线.
+            excel.SetCellBorder("A1", XlBordersIndex.xlEdgeBottom, XlLineStyle.xlContinuous, XlBorderWeight.xlThin);
+             </summary>
+             <param name="range"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.InsertRows(System.String)">
+            <summary>
+            在指定位置插入整行
+            </summary>
+            <param name="address"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetValue(System.String)">
+            <summary>
+            得到某区域的值
+            </summary>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.InsertPicture(System.String,System.String)">
+            <summary>
+            在指定位置插入图片
+            不同版本的office可能效果不同
+            </summary>
+            <param name="range"></param>
+            <param name="picFileName"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetSingelCellValue(System.Int32,System.Int32,System.String)">
+            <summary>
+            设置单元值.
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetSingelCellValue(System.Int32,System.Int32,System.String,OfficeOperation.XlHorizontalAlignment)">
+            <summary>
+            设置单元值（重载）.
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetSingelCellValue(System.Int32,System.Int32,System.String,OfficeOperation.XlHorizontalAlignment,OfficeOperation.XlVerticalAlignment)">
+            <summary>
+            设置单元值（重载）.
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetGroupCellsValue(System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            给一个合并单元格设置值
+            </summary>
+            <param name="x1"></param>
+            <param name="y1"></param>
+            <param name="x2"></param>
+            <param name="y2"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetGroupCellsValue(System.Int32,System.Int32,System.Int32,System.Int32,System.String,OfficeOperation.XlHorizontalAlignment)">
+            <summary>
+            给一个合并单元格设置值,和文字横向对齐方式
+            </summary>
+            <param name="x1"></param>
+            <param name="y1"></param>
+            <param name="x2"></param>
+            <param name="y2"></param>
+            <param name="value"></param>
+            <param name="xlHorizontalAlignment"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetGroupCellsValue(System.Int32,System.Int32,System.Int32,System.Int32,System.String,OfficeOperation.XlHorizontalAlignment,System.Boolean)">
+            <summary>
+            给一个单元格设置值,文字横向对齐方式,是否自动换行
+            </summary>
+            <param name="x1"></param>
+            <param name="y1"></param>
+            <param name="x2"></param>
+            <param name="y2"></param>
+            <param name="value"></param>
+            <param name="xlHorizontalAlignment"></param>
+            <param name="wrapText"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetGroupCellsValue(System.Int32,System.Int32,System.Int32,System.Int32,System.String,OfficeOperation.XlHorizontalAlignment,System.Boolean,System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            给一个单元格设置值,文字横向对齐方式,是否自动换行,字体,颜色
+            </summary>
+            <param name="x1"></param>
+            <param name="y1"></param>
+            <param name="x2"></param>
+            <param name="y2"></param>
+            <param name="value"></param>
+            <param name="xlHorizontalAlignment"></param>
+            <param name="wrapText"></param>
+            <param name="font"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetGroupCellsValue(System.Int32,System.Int32,System.Int32,System.Int32,System.String,OfficeOperation.XlHorizontalAlignment,OfficeOperation.XlVerticalAlignment,System.Boolean,System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            给一个单元格设置值,文字横向对齐方式,是否自动换行,字体,颜色
+            </summary>
+            <param name="x1"></param>
+            <param name="y1"></param>
+            <param name="x2"></param>
+            <param name="y2"></param>
+            <param name="value"></param>
+            <param name="xlHorizontalAlignment"></param>
+            <param name="wrapText"></param>
+            <param name="font"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetGroupCellsValue(System.Int32,System.Int32,System.Int32,System.Int32,System.String,OfficeOperation.XlHorizontalAlignment,System.Boolean,System.Drawing.Font)">
+            <summary>
+            给一个单元格设置值,文字横向对齐方式,是否自动换行,字体
+            </summary>
+            <param name="x1"></param>
+            <param name="y1"></param>
+            <param name="x2"></param>
+            <param name="y2"></param>
+            <param name="value"></param>
+            <param name="xlHorizontalAlignment"></param>
+            <param name="wrapText"></param>
+            <param name="font"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetColumnRange(System.Int32)">
+            <summary>
+            得到某整列的range
+            </summary>
+            <param name="x">那一列的x坐标</param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetColumnRange(System.Int32,System.Int32)">
+            <summary>
+            得到多个整列的range
+            </summary>
+            <param name="x1">从哪列起</param>
+            <param name="x2">到那列为止</param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetSingleCellRange(System.Int32,System.Int32)">
+            <summary>
+            得到某个坐标对应的range(单个点)
+            </summary>
+            <param name="x">横坐标</param>
+            <param name="y">竖坐标</param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetGroupCellsRange(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            得到一个区域对应的range(多个点
+            </summary>
+            <param name="x1">左上横</param>
+            <param name="y1">左上竖</param>
+            <param name="x2">右下横</param>
+            <param name="y2">右下竖</param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.CopyRowToRow(System.Int32)">
+            <summary>
+            为了达到复制单元格的作用,调用此方法.
+            </summary>
+            <param name="rowNo"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.CopyRowToRow(System.Int32,System.Int32)">
+            <summary>
+            为了达到复制单元格的作用,调用此方法.
+            复制完毕会在指定位置添加出一行
+            </summary>
+            <param name="sourceRowNo">源行号</param>
+            <param name="aimRowNo">目标行号</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.ReplaceWordToWord(System.String,System.String)">
+            <summary>
+            全文替换某些字符
+            </summary>
+            <param name="wordToReplace">要替换的字符</param>
+            <param name="wordReplacedWith">要替换成什么字符</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.ReplaceWordToWord(System.String,System.String,System.String)">
+            <summary>
+            指定区域替换某些字符
+            </summary>
+            <param name="wordToReplace">要替换的字符</param>
+            <param name="wordReplacedWith">要替换成什么字符</param>
+            <param name="range">对指定区域替换</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetRowHeight(System.Int32)">
+            <summary>
+            得到某行的高度
+            </summary>
+            <param name="row">指定行</param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.RowAutoFit(System.Int32,System.Int32)">
+            <summary>
+            行自动收缩
+            </summary>
+            <param name="beginrow"></param>
+            <param name="endRow"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetMaxRowNumber">
+            <summary>
+            得到用户操作区域的最大x,y,自动按照第二列为依据判断,
+            如果希望用其它列作为依据判断,则使用带参数的方法.
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetMaxRowNumber(System.Int32)">
+            <summary>
+            得到用户操作区域的最大x,y,自动按照第二列为依据判断,
+            如果希望用其它列作为依据判断,则使用带参数的方法.
+            </summary>
+            <param name="byWhichColumn">根据某个列判断</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetRange(System.Object,System.Object[])">
+            <summary>
+            GET RANGE BY ADDRESS
+            使用方法object xlRange = xlApp.GetRange(xlSheet, new object[] { "A1", "A100" });
+            </summary>
+            <param name="WorkSheet"></param>
+            <param name="address"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetRangeValue(System.Int32,System.Object[])">
+            <summary>
+            得到某页某区域的值,通常用不上这个方法
+            </summary>
+            <param name="sheetnumber">第几页</param>
+            <param name="address">某些区域的数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetRangeValue(System.Int32,System.String)">
+            <summary>
+            得到某页某区域的值
+            </summary>
+            <param name="sheetnumber">第几页</param>
+            <param name="range">区域</param>
+            <returns>区域值</returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.ActiveSheet(System.Int32)">
+            <summary>
+            让第几页变成当前有效页
+            </summary>
+            <param name="sheetnumber">第几页</param>
+            <returns>页对象</returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.GetSheetsCount">
+            <summary>
+            得到有多少个页.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.Excel.ColumnWidth(System.String,System.Double)">
+            <summary>
+            设置列宽
+            </summary>
+            <param name="range">要设置区域</param>
+            <param name="AWidth">宽度</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetFont(System.String,System.Drawing.Font)">
+            <summary>
+            为某区域设置字体
+            </summary>
+            <param name="range">目标区域</param>
+            <param name="AFont">字体对象</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetColor(System.String,System.Drawing.Color)">
+            <summary>
+            设置颜色
+            </summary>
+            <param name="range">目标区域</param>
+            <param name="color">颜色</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetFont(System.String,System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            同时设置字体及颜色
+            </summary>
+            <param name="range"></param>
+            <param name="AFont"></param>
+            <param name="AColor"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetRangePattern(System.String,OfficeOperation.XLPattern)">
+            <summary>
+            设置某区域的填充方式
+            </summary>
+            <param name="range">区域</param>
+            <param name="APatternIndex">填充方式</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.GroupRows(System.String,System.Boolean)">
+            <summary>
+            把某区域行进行group操作
+            </summary>
+            <param name="range"></param>
+            <param name="AIsGrouping"></param>
+        </member>
+        <member name="M:OfficeOperation.Excel.GroupColumns(System.String,System.Boolean)">
+            <summary>
+            对指定区域进行Group操作(收缩,展开)
+            </summary>
+            <param name="range">要操作的区域</param>
+            <param name="AIsGrouping">是否Group操作</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.AlignHorizontal(System.String,OfficeOperation.XlHorizontalAlignment)">
+            <summary>
+            横向对齐方式
+            </summary>
+            <param name="range">要调整的区域</param>
+            <param name="AAlign">对齐方式</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.FreezePanes(System.String)">
+            <summary>
+            冻结某位置
+            </summary>
+            <param name="range">要冻结的区域</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.SetTextVerticalAlignment(System.String,OfficeOperation.XlVerticalAlignment)">
+            <summary>
+            竖向对其方式
+            </summary>
+            <param name="range">要处理的区域</param>
+            <param name="AAlign">对齐方式</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.PageBreakerVertical(System.String)">
+            <summary>
+            纸张竖向强制分页
+            </summary>
+            <param name="range">要从</param>
+        </member>
+        <member name="M:OfficeOperation.Excel.PageBreakerHorizontal(System.Int32)">
+            <summary>
+            在横向添加分页符
+            </summary>
+            <param name="row">要加入分页符的下一行,如输入2则在1和2之间加入分页符.</param>
+        </member>
+        <member name="P:OfficeOperation.Excel.pt">
+            <summary>
+            对象handle
+            </summary>
+        </member>
+        <member name="P:OfficeOperation.Excel.Visible">
+            <summary>
+            是否可见
+            </summary>
+        </member>
+        <member name="T:OfficeOperation.xlPaperSize">
+            <summary>
+            纸张大小
+            </summary>
+        </member>
+        <member name="T:OfficeOperation.XlHorizontalAlignment">
+            <summary>
+            横向对齐属性
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlHorizontalAlignment.xlGeneral">
+             <summary>
+            常规
+             </summary>
+        </member>
+        <member name="F:OfficeOperation.XlHorizontalAlignment.xlLeft">
+            <summary>
+            靠左
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlHorizontalAlignment.xlCenter">
+            <summary>
+            居中
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlHorizontalAlignment.xlRight">
+            <summary>
+            靠右
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlHorizontalAlignment.xlFill">
+            <summary>
+            填充
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlHorizontalAlignment.xlJustify">
+            <summary>
+            两端对齐
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlHorizontalAlignment.xlCenterAcrossSelection">
+            <summary>
+            跨列居中
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlHorizontalAlignment.xlDistributed">
+            <summary>
+            分散对齐
+            </summary>
+        </member>
+        <member name="T:OfficeOperation.XlVerticalAlignment">
+            <summary>
+            竖向对其属性
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlVerticalAlignment.xlTop">
+            <summary>
+            靠上
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlVerticalAlignment.xlCenter">
+            <summary>
+            居中
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlVerticalAlignment.xlBottom">
+            <summary>
+            靠下
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlVerticalAlignment.xlJustify">
+            <summary>
+            两端对齐
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.XlVerticalAlignment.xlDistributed">
+            <summary>
+            分散对齐
+            </summary>
+        </member>
+        <member name="T:OfficeOperation.OperationExcel">
+            <summary>
+            对Excel类型报表的封装对象，用Excel操作实现简单的数据展示功能
+            
+            2011年6月15日修改:增加了页眉页脚,注意Title和页眉页脚的关系
+            Title只出现一次,不会每页都出现,而页眉页脚可以每一页都出现,而且还可以显示不一样的内容.
+            
+            2012年2月10日修改：增加了Grid(格子）画法的封装，可以更灵活的对Excel中边框进行描述；
+                另外增加了字体颜色的支持
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OperationExcel.PAGECOUNT">
+            <summary>
+            总页数，使用时，如果要想显示 共？页 请这样写 s = "共"+ OperationExcel.PAGECOUNT + "页";
+            后台自动计算。
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OperationExcel.NOWPAGE">
+            <summary>
+            当前为第几页，使用时，如果要想显示 第？页 请这样写 s = "第"+ OperationExcel.NOWPAGE + "页";
+            后台自动计算。
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OperationExcel.lastPageFillGrid">
+            <summary>
+            最后一行是否用多条空行进行填充,如果是,则需要对另一个结构体进行赋值.
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OperationExcel.defaultFont">
+            <summary>
+            默认字体
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OperationExcel.defaultTitleFont">
+            <summary>
+            默认标题字体
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OperationExcel.allColumnSize">
+            <summary>
+            所有列的初始化大小
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OperationExcel.allLineSize">
+            <summary>
+            所有行的初始化大小
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OperationExcel.allMultiGridPair">
+            <summary>
+            所有占多格的值对(仅限上下多格)
+            标题占多格不算
+            此结构为了快速及时分页时切割一个合并单元格为两个格时使用
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OperationExcel.allMultiGridUnit">
+            <summary>
+            所有占多格的单元格(仅限上下多格)
+            标题占多格不算
+            此结构为了快速及时分页时切割一个合并单元格为两个格时使用
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OperationExcel.ChangeStepView">
+            <summary>
+            此委托将通知使用者当前打印的进度
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.SetHorizontal(System.Boolean)">
+            <summary>
+            设置横向还是纵向打印
+            </summary>
+            <param name="horizontal">true 横向,false 纵向</param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.SetMargin(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            设置页边距
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <param name="top"></param>
+            <param name="bottom"></param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.SetFreezePanes(System.Int32,System.Int32)">
+            <summary>
+            设置冻结
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.AddHeaderAndFooter(OfficeOperation.HeaderAndFooter)">
+            <summary>
+            添加 页眉页脚
+            这有个bug，可能影响预览的效果，当页眉页脚占的列多于主体中的列时，可能会显示不下！
+            </summary>
+            <param name="oneHeaderAndFooter"></param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.AddPageBreakerHorizontal(System.Int32)">
+            <summary>
+            添加打印分页标识
+            </summary>
+            <param name="lineNo">行前添加,如输入2,则在1和2之间添加</param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.AddTitle(System.String,System.Int32,System.String@)">
+            <summary>
+            设定主题,主题都是横跨整个行,且居中的
+            </summary>
+            <param name="title">主题值</param>
+            <param name="fromLine">在第几行</param>
+            <param name="err">错误信息</param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.InsertABodyUnit(OfficeOperation.OneUnit,System.String@)">
+            <summary>
+            加入一个OneUnit,起始行或起始列不能是0
+            </summary>
+            <param name="bodyUnit"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.InsertAGrid(OfficeOperation.OneGrid)">
+            <summary>
+             加入一个OneGrid
+             </summary>
+             <param name="oneGrid"></param> 
+             <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.addBodyUnit(OfficeOperation.OneUnit)">
+            <summary>
+            加入一个OneUnit,起始行或起始列不能是0
+            </summary>
+            <param name="bodyUnit"></param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.InsertABodyPair(OfficeOperation.OnePair,System.String@)">
+            <summary>
+            加入一个OnePair,起始行或起始列不能是0
+            </summary>
+            <param name="bodyPair"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.addBodyPair(OfficeOperation.OnePair)">
+            <summary>
+            加入一个OnePair,起始行或起始列不能是0
+            </summary>
+            <param name="bodyPair"></param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.AddAllLineSize(System.Int32,System.Int32)">
+            <summary>
+            设置某一行的行高度（起始行不能为0）
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.AddAllColumnSize(System.Int32,System.Int32)">
+            <summary>
+            设置某一列的列宽度（起始列不能为0）
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.SetPageFillGrid(System.Boolean,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置某页自动添加行
+            打印时,页眉和页脚之间如果空行不带单元格的区域太大会不好看,
+            这里会自动添加多个横行,并且添加单元格,让打印输出时看起来比较真实
+            </summary>
+            <param name="ifFill">是否需要添加</param>
+            <param name="fromColumn">从第几列开始添加</param>
+            <param name="endColumn">到第几列为止</param>
+            <param name="rowHeight">空行的高度</param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.InsertATable(OfficeOperation.OneTable,System.String@)">
+            <summary>
+            插入一个表格
+            为加快形成速度,避免一次插入一个元素,现在使用插入一个表格的方式进行操作
+            </summary>
+            <param name="oneTable">表格对象</param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.ResetAll">
+            <summary>
+            重新设置所有参数
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.judgeCanAddLine(System.Int32,System.Int32,System.String@)">
+            <summary>
+            判断是否可以添加一行,当出现重复行,或者当前行任何一个元素被frame占用,则返回失败
+            </summary>
+            <param name="y">起始行</param>
+            <param name="height">行数</param>
+            <param name="err">错误描述</param>
+            <returns>是否成功添加</returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.judgeCanAddFrame(System.Int32,System.Int32,System.Int32,System.Int32,System.String@)">
+            <summary>
+            判断是否可以添加一个Frame,当出现任何行定义或者任意一个元素被frame占用,则返回失败
+            </summary>
+            <param name="x">frame的起始列</param>
+            <param name="y">frame的起始行</param>
+            <param name="width">frame的列数</param>
+            <param name="height">frame的行数</param>
+            <param name="err">错误信息</param>
+            <returns>是否成功添加</returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.DrawAUnit(OfficeOperation.OneUnit,System.String@)">
+            <summary>
+            画一个单元格,实际普通的frame和title均最后转变成frame画出来
+            </summary>
+            <param name="theUnitToDraw">单元格</param>
+            <param name="err">错误</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.DrawAPair(OfficeOperation.OnePair,System.String@)">
+            <summary>
+            画一个对组.
+            </summary>
+            <param name="thePairToDraw">要画的对组</param>
+            <param name="err">错误返回值</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.DrawATitle(OfficeOperation.OneUnit,System.String@)">
+            <summary>
+            画一个标题,实际也是画标示过的普通单元格
+            </summary>
+            <param name="theUnitToDraw"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.DrawATable(OfficeOperation.OneTable,System.String@)">
+            <summary>
+            画一个标题,实际也是画标示过的普通单元格
+            </summary>
+            <param name="theTableToDraw">要画的table对象</param>
+            <param name="err">错误信息</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.ExportToExcel(System.String,System.Boolean,System.String@)">
+            <summary>
+            导出excel
+            最关键的方法,把之前所有的初始化内容用上,导出到具体的Excel中.
+            </summary>
+            <param name="fileAddress">保存路径</param>
+            <param name="overrideFile"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.ExportToExcel(System.String,System.Boolean,System.Boolean,System.String@)">
+            <summary>
+            导出excel
+            最关键的方法,把之前所有的初始化内容用上,导出到具体的Excel中.
+            </summary>
+            <param name="fileAddress">文件地址</param>
+            <param name="isModel">是否是对模板文件操作,对模板文件操作时不要收缩单元格</param>
+            <param name="overrideFile">是否覆盖重名文件,不覆盖时,如果有重名则报错退出!</param>
+            <param name="err">错误提示</param>
+            <returns>是否成功导出</returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.PrepareToExportToOtherObject(System.Drawing.Graphics)">
+            <summary>
+            准备导出到内部控件,
+            获取页眉页脚的高度,
+            单页显示区间大小,分页符号的位置以及各分页行
+            特殊情况,单页内容超过页高度,应自动增大,与Excel导出不同
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.ExportToOtherObject(System.Drawing.Graphics,System.Int32,System.String@)">
+            <summary>
+            导出到其它显示控件时调用的方法，比如一个picturebox或panel
+            </summary>
+            <param name="g">显示控件的graphics，可以直接使用api得到任何窗体的handle然后创建一个g，通常在paint时调用，直接有此参数</param>
+            <param name="pageNumber">当前是第几页，会根据此参数进行分页展示</param>
+            <param name="err">错误信息</param>
+            <returns>是否成功显示</returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.dispartOneUnitToTwoUnit(OfficeOperation.OneUnit,System.Int32,System.Int32,System.String@)">
+            <summary>
+            把某个单元格在第lineNo行,分成两部分.        
+            </summary>
+            <param name="theUnitToDispart">要分割的元素</param>
+            <param name="insertRowCount">插入行数,如果插入行,则theUnitToDispart的对应行与实际表格的行是不想同的</param>
+            <param name="whichRowToDispart">从哪一行开始分割,这是实际Excel中的行</param>
+            <param name="err">错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.dispartOnePairToTwoPair(OfficeOperation.OnePair,System.Int32,System.Int32,System.String@)">
+            <summary>
+            把某个单元格在第lineNo行,分成两部分.
+            </summary>
+            <param name="thePairToDispart">一个需要分割的OnePair</param>
+            <param name="insertRowCount">插入行数,如果插入行,则theUnitToDispart的对应行与实际表格的行是不想同的</param>
+            <param name="whichRowToDispart">从哪一行开始分割,这是实际Excel中的行</param>
+            <param name="err">错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:OfficeOperation.OperationExcel.Dispose">
+            <summary>
+            在此对象释放时,请主动调用此方法,真正关闭Excel实例.
+            </summary>
+        </member>
+        <member name="P:OfficeOperation.OperationExcel.OnceInsertBoder">
+            <summary>
+            是否一次性添加表格外框,如果是,则在导出过程中事先不需要定义表格数据的外框,直到最终形成文件后,添加页眉页脚前,一次性给指定的区域添加表格
+            </summary>
+        </member>
+        <member name="P:OfficeOperation.OperationExcel.DefaultFont">
+            <summary>
+            默认字体
+            </summary>
+        </member>
+        <member name="P:OfficeOperation.OperationExcel.ColumnsToReMerge">
+            <summary>
+            那些列需要合并单元格,设置了的列在同一个页中上下一样的会自动合并单元格
+            </summary>
+        </member>
+        <member name="P:OfficeOperation.OperationExcel.DefaultBodyHorizontalMerge">
+            <summary>
+            表体内部默认添加的横行合并单元格的设置，
+            如一个证书表，不知道多少行，默认添加行后，第3，4列需要合并成一个单元格显示，5,6,7列需要合并成一个单元格显示，则设置为{(3,1),(5,2)}
+            此功能仅作用于表格不够，需要自动添加一行时使用，而且仅在表体中使用，不在页眉页脚中使用
+            一个表格仅限一种，如果有必要多种，则应该再升级改造，类似页眉页脚中的设置
+            </summary>
+        </member>
+        <member name="P:OfficeOperation.OperationExcel.MaxUsedLine">
+            <summary>
+            用到的最大行
+            </summary>
+        </member>
+        <member name="P:OfficeOperation.OperationExcel.GetSize">
+            <summary>
+            得到当前文档的横纵最大使用位置
+            </summary>
+        </member>
+        <member name="P:OfficeOperation.OperationExcel.InsideObjectPageCount">
+            <summary>
+            内部展示控件使用的总页数(与Excel导出可能不同)
+            </summary>
+        </member>
+        <member name="T:OfficeOperation.OperationExcel.changeStepView">
+            <summary>
+            委托函数接口，更改当前执行到第几步的显示
+            </summary>
+            <param name="whichStep">当前是第几步</param>
+            <param name="percent">执行的百分比</param>
+        </member>
+        <member name="T:OfficeOperation.OneUnit">
+            <summary>
+            单一元素
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OneUnit.TheFont">
+            <summary>
+            可以修改默认字体,不修改则为默认字体;
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.OneUnit.#ctor(System.String,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,OfficeOperation.XlHorizontalAlignment,OfficeOperation.XlVerticalAlignment,System.Drawing.Font,OfficeOperation.XLPattern,System.Drawing.Color)">
+            <summary>
+            构建一个单元格
+            </summary>
+            <param name="value">元素</param>
+            <param name="canEdit">是否编辑</param>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">占行数</param>
+            <param name="columnCount">占列数</param>
+            <param name="useFrame">是否显示边框</param>
+            <param name="bottomLine">是否显示文字底行线</param>
+            <param name="wrapText">是否自动换行</param>
+            <param name="xlHorizontalAlignment">文本横向对齐样式</param>
+            <param name="xlVerticalAlignment">文本竖向对齐样式</param>
+            <param name="theFont">字体</param>
+            <param name="thePattern">填充方式</param>
+            <param name="theColor">颜色</param>
+        </member>
+        <member name="M:OfficeOperation.OneUnit.ToString">
+            <summary>
+            重载的toString方法,返回其Value值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:OfficeOperation.OnePair">
+            <summary>
+            一对元素，比如 船舶：AAA船，设备名称：左主机 等
+            一般报表元素都是成对出现的！
+            我们命名第一个元素为Label,第二个元素为Value 
+            ----前面部分是不带边框的显示方式
+            1.普通显示,名称后面加个冒号,占一个单元格(或者占group的单元格)
+            2.名称后加个冒号,分别占一个个单元格
+            3.同上,但是Value加下划线(只要是加下划线的,我们通常都使用单元格绘制的方式,这样会占两行
+            ----下面是带边框的显示方式
+            4.普通显示,占两个单元格,仅上下边框
+            5.普通显示,占两个单元格,仅左右边框
+            6.普通显示,占两个单元格,完整边框
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OnePair.TheFont">
+            <summary>
+            可以修改字体,不修改则为默认字体
+            </summary>
+        </member>
+        <member name="T:OfficeOperation.PairType">
+            <summary>
+            一对元素出现一般几种模式，
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.PairType.NOBORDERONEFRAME">
+            <summary>
+            1.普通显示,名称后面加个冒号,占一个单元格(或者占group的单元格)
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.PairType.NOBORDERTWOFRAME">
+            <summary>
+            2.名称后加个冒号,分别占一个个单元格.
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.PairType.NOBORDERTWOFRAMEWITHBOTTOMLINE">
+            <summary>
+            3名称后加个冒号,分别占一个个单元格,
+            但是Value加下划线(只要是加下划线的,我们通常都使用单元格绘制的方式,这样会占两行
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.PairType.UPBOTTOMBORDER">
+            <summary>
+            4.普通显示,占两个单元格,仅上下边框.
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.PairType.LEFTRIGHTBORDER">
+            <summary>
+            5.普通显示,占两个单元格,仅左右边框.
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.PairType.ALLBORDER">
+            <summary>
+            6.普通显示,占两个单元格,完整边框.
+            </summary>
+        </member>
+        <member name="T:OfficeOperation.OneTable">
+            <summary>
+            此结构体内的所有元素均不能跨行跨列
+            </summary>
+        </member>
+        <member name="F:OfficeOperation.OneTable.TheFont">
+            <summary>
+            可以修改默认字体,不修改则为默认字体;
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.OneTable.#ctor(System.String[0:,0:],System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,OfficeOperation.XlHorizontalAlignment,System.Drawing.Font,System.Boolean)">
+            <summary>
+            指定区域一组元素的设值
+            </summary>
+            <param name="values">元素集合</param>
+            <param name="canEdit">是否能编辑</param>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数</param>
+            <param name="columnCount">列数</param>
+            <param name="useFrame">是否显示边框</param>
+            <param name="allXlHorizontalAlignment">文本对齐样式</param>
+            <param name="theFont">何种字体</param>
+            <param name="wrapText">文本内容是否全部显示</param>
+        </member>
+        <member name="M:OfficeOperation.OneTable.#ctor(System.String[0:,0:],System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,OfficeOperation.XlHorizontalAlignment)">
+            <summary>
+            指定区域一组元素的设值
+            </summary>
+            <param name="values">元素集合</param>
+            <param name="canEdit">是否能编辑</param>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数</param>
+            <param name="columnCount">列数</param>
+            <param name="useFrame">是否显示边框</param>
+            <param name="xlHorizontalAlignment">文本对齐样式</param>
+        </member>
+        <member name="M:OfficeOperation.OneTable.#ctor(System.String[0:,0:],System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            指定区域一组元素的设值
+            </summary>
+            <param name="values">元素集合</param>
+            <param name="canEdit">是否能编辑</param>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数</param>
+            <param name="columnCount">列数</param>
+            <param name="useFrame">是否显示边框</param>
+        </member>
+        <member name="M:OfficeOperation.OneTable.#ctor(System.String[0:,0:],System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            指定区域一组元素的设值
+            </summary>
+            <param name="values">元素集合</param>
+            <param name="canEdit">是否能编辑</param>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数</param>
+            <param name="columnCount">列数</param> 
+        </member>
+        <member name="M:OfficeOperation.OneTable.#ctor(System.String[0:,0:],System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            指定区域一组元素的设值
+            </summary>
+            <param name="values">元素集合</param>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数</param>
+            <param name="columnCount">列数</param> 
+        </member>
+        <member name="T:OfficeOperation.OneGrid">
+            <summary>
+            一个区域的格子，支持矩形，多行多列的规则格子定义，支持外围粗，内部细
+            以后版本需要支持其它线性与颜色，暂不支持
+            使用时，需要对横纵多个起始列进行定义，四周的可以忽略，最左用1，最上也是1
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.OneGrid.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[],System.Int32[],System.Boolean)">
+            <summary>
+            一个区域的格子，支持矩形，多行多列的规则格子定义，支持外围粗，内部细 
+            使用时，需要对横纵多个起始列进行定义，四周的可以忽略，最左用1，最上也是1
+            </summary>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数量</param>
+            <param name="columnCount">列数量</param>
+            <param name="allX">所有需要特殊画的内部纵向格子</param>
+            <param name="allY">所有需要特殊画的内部横向格子</param>
+            <param name="useThinkBorder">是否用粗体画外围边框</param>
+        </member>
+        <member name="M:OfficeOperation.OneGrid.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[],System.Int32[])">
+            <summary>
+            一个区域的格子，支持矩形，多行多列的规则格子定义，支持外围粗，内部细 
+            使用时，需要对横纵多个起始列进行定义，四周的可以忽略，最左用1，最上也是1
+            </summary>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数量</param>
+            <param name="columnCount">列数量</param>
+            <param name="allX">所有需要特殊画的内部纵向格子</param>
+            <param name="allY">所有需要特殊画的内部横向格子</param>
+        </member>
+        <member name="M:OfficeOperation.OneGrid.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            一个区域的格子，支持矩形，多行多列的规则格子定义，支持外围粗，内部细 
+            使用时，需要对横纵多个起始列进行定义，四周的可以忽略，最左用1，最上也是1
+            </summary>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数量</param>
+            <param name="columnCount">列数量</param>
+            <param name="allX">所有内部纵向格子都需要画线</param>
+            <param name="allY">所有内部横向格子都需要画线</param>
+            <param name="useThinkBorder">是否用粗体画外围边框</param>
+        </member>
+        <member name="M:OfficeOperation.OneGrid.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[],System.Boolean,System.Boolean)">
+            <summary>
+            一个区域的格子，支持矩形，多行多列的规则格子定义，支持外围粗，内部细 
+            使用时，需要对横纵多个起始列进行定义，四周的可以忽略，最左用1，最上也是1
+            </summary>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数量</param>
+            <param name="columnCount">列数量</param>
+            <param name="allX">所有需要特殊画的内部纵向格子</param>
+            <param name="allY">所有内部横向格子都需要画线</param>
+            <param name="useThinkBorder">是否用粗体画外围边框</param>
+        </member>
+        <member name="M:OfficeOperation.OneGrid.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            一个区域的格子，支持矩形，多行多列的规则格子定义，支持外围粗，内部细 
+            使用时，需要对横纵多个起始列进行定义，四周的可以忽略，最左用1，最上也是1
+            </summary>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数量</param>
+            <param name="columnCount">列数量</param>
+            <param name="useThinkBorder">是否用粗体画外围边框</param>
+        </member>
+        <member name="M:OfficeOperation.OneGrid.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            一个区域的格子，支持矩形，多行多列的规则格子定义，支持外围粗，内部细 
+            使用时，需要对横纵多个起始列进行定义，四周的可以忽略，最左用1，最上也是1
+            </summary>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数量</param>
+            <param name="columnCount">列数量</param>
+        </member>
+        <member name="M:OfficeOperation.OneGrid.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            一个区域的格子，支持矩形，多行多列的规则格子定义，支持外围粗，内部细 
+            使用时，需要对横纵多个起始列进行定义，四周的可以忽略，最左用1，最上也是1
+            </summary>
+            <param name="fromLine">起始行</param>
+            <param name="fromColumn">起始列</param>
+            <param name="lineCount">行数量</param>
+            <param name="columnCount">列数量</param>
+            <param name="allX">所有内部纵向格子都需要画线</param>
+            <param name="allY">所有内部横向格子都需要画线</param>
+        </member>
+        <member name="T:OfficeOperation.HeaderAndFooter">
+            <summary>
+            页眉页脚,在本系统中,支持打印时对于不同页显示不同的页眉页脚的形式,所以页眉页脚并不是使用Excel的页眉页脚方式,
+            而是自行在单元格中添加的方式,而具体插入时,使用的是后操作方式,也就是说,对于页眉页脚在初期计算行的一些信息时
+            并不参与运算,一直到最终转到Excel时,才根据实际单元格的大小进行进一步处理
+            一个页眉页脚结构体包含:有效起始行,页眉高度,页脚高度,页眉列表,页脚列表,
+            其中页眉页脚列表,均为List[OneUnit]方式.而页眉是针对每页起始行的,而页脚是针对每页终止行的
+            分页时,必须预留出页眉页脚的高度,根据实际需要添加行.
+            
+            另外,注意,在header和footer中 PAGECOUNT 表示共多少页 ##Page## 表示当前是多少页
+            
+            </summary>
+        </member>
+        <member name="M:OfficeOperation.HeaderAndFooter.#ctor(System.Collections.Generic.List{OfficeOperation.OneUnit},System.Collections.Generic.List{OfficeOperation.OneUnit},System.Int32,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{OfficeOperation.OneGrid},System.Collections.Generic.List{OfficeOperation.OneGrid})">
+            <summary>
+            页眉页脚
+            </summary>
+            <param name="header">所有页眉元素（不包含格子）</param>
+            <param name="footer">所有页脚元素（不包含格子）</param>
+            <param name="usefullBeginLine">有效起始行，从多少行开始（不计算页眉页脚所占的行）才使用此页眉页脚，应对于一个文件有多种页眉页脚的情况</param>
+            <param name="headerRowSize">页眉各行占多少高度（单位为像素）</param>
+            <param name="footerRowSize">页脚各行占多少高度（单位为像素）</param>
+            <param name="allHeaderGrid">页眉的格子</param>
+            <param name="allFooterGrid">页脚的所有格子</param>
+        </member>
+        <member name="M:OfficeOperation.HeaderAndFooter.#ctor(System.Collections.Generic.List{OfficeOperation.OneUnit},System.Collections.Generic.List{OfficeOperation.OneUnit},System.Int32,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            页眉页脚
+            </summary>
+            <param name="header">所有页眉元素（不包含格子）</param>
+            <param name="footer">所有页脚元素（不包含格子）</param>
+            <param name="usefullBeginLine">有效起始行，从多少行开始（不计算页眉页脚所占的行）才使用此页眉页脚，应对于一个文件有多种页眉页脚的情况</param>
+            <param name="headerRowSize">页眉各行占多少高度（单位为像素）</param>
+            <param name="footerRowSize">页脚各行占多少高度（单位为像素）</param>
+        </member>
+    </members>
+</doc>

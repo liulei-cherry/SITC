@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{064B585D-F342-458B-B83E-007A87158E63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Repair</RootNamespace>
+    <AssemblyName>Repair</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OfficeOperation, Version=1.2.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllLibrary\ViewControlDll\OfficeOperation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataObject\DockRepairSummarize.cs" />
+    <Compile Include="DataObject\RepairDockRepair.cs" />
+    <Compile Include="DataObject\ShipRepairEvent.cs" />
+    <Compile Include="DataObject\ShipRunningRepairRelation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObject\ShipRepairProject.cs" />
+    <Compile Include="RepairConfig.cs" />
+    <Compile Include="Services\DockRepairSummarizeService.cs" />
+    <Compile Include="Services\DockRepairSummarizeServiceEx.cs" />
+    <Compile Include="Services\RepairNotVoucherAlert.cs" />
+    <Compile Include="Services\RepairApplyAlert.cs" />
+    <Compile Include="Services\RepairApplyAlertOnce.cs" />
+    <Compile Include="Services\RepairDockRepairService.cs" />
+    <Compile Include="Services\RepairDockRepairServiceEx.cs" />
+    <Compile Include="Services\ShipRepairEventService.cs" />
+    <Compile Include="Services\ShipRepairEventServiceMore.cs" />
+    <Compile Include="Services\ShipRepairProjectService.cs" />
+    <Compile Include="Services\ShipRepairProjectServiceMore.cs" />
+    <Compile Include="Services\ShipRunningRepairRelationService.cs" />
+    <Compile Include="Services\ShipRunningRepairRelationServiceMore.cs" />
+    <Compile Include="Viewer\FrmComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmComplete.Designer.cs">
+      <DependentUpon>FrmComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCompleteAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCompleteAll.designer.cs">
+      <DependentUpon>FrmCompleteAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCompleteDisannul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCompleteDisannul.designer.cs">
+      <DependentUpon>FrmCompleteDisannul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCompleteEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCompleteEdit.Designer.cs">
+      <DependentUpon>FrmCompleteEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCompleteProjectOff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCompleteProjectOff.Designer.cs">
+      <DependentUpon>FrmCompleteProjectOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCreateCertification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCreateCertification.Designer.cs">
+      <DependentUpon>FrmCreateCertification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmDockRepairRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmDockRepairRecord.designer.cs">
+      <DependentUpon>FrmDockRepairRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmDockRepairRecordEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmDockRepairRecordEdit.designer.cs">
+      <DependentUpon>FrmDockRepairRecordEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmDockRepairSummarize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmDockRepairSummarize.Designer.cs">
+      <DependentUpon>FrmDockRepairSummarize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmDockRepairSummarizeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmDockRepairSummarizeEdit.designer.cs">
+      <DependentUpon>FrmDockRepairSummarizeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmFollowDelegateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmFollowDelegateEdit.Designer.cs">
+      <DependentUpon>FrmFollowDelegateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmRepairApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmRepairApply.Designer.cs">
+      <DependentUpon>FrmRepairApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmRepairApplyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmRepairApplyEdit.Designer.cs">
+      <DependentUpon>FrmRepairApplyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmRepairDelegateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmRepairDelegateEdit.Designer.cs">
+      <DependentUpon>FrmRepairDelegateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmRepairDuoAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmRepairDuoAudit.Designer.cs">
+      <DependentUpon>FrmRepairDuoAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmRepairHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmRepairHistory.Designer.cs">
+      <DependentUpon>FrmRepairHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmCompleteEditRemark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmCompleteEditRemark.Designer.cs">
+      <DependentUpon>FrmCompleteEditRemark.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmComplete.resx">
+      <DependentUpon>FrmComplete.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCompleteAll.resx">
+      <DependentUpon>FrmCompleteAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCompleteDisannul.resx">
+      <DependentUpon>FrmCompleteDisannul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCompleteEdit.resx">
+      <DependentUpon>FrmCompleteEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCompleteProjectOff.resx">
+      <DependentUpon>FrmCompleteProjectOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCreateCertification.resx">
+      <DependentUpon>FrmCreateCertification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmDockRepairRecord.resx">
+      <DependentUpon>FrmDockRepairRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmDockRepairRecordEdit.resx">
+      <DependentUpon>FrmDockRepairRecordEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmDockRepairSummarize.resx">
+      <DependentUpon>FrmDockRepairSummarize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmDockRepairSummarizeEdit.resx">
+      <DependentUpon>FrmDockRepairSummarizeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmFollowDelegateEdit.resx">
+      <DependentUpon>FrmFollowDelegateEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmRepairApply.resx">
+      <DependentUpon>FrmRepairApply.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmRepairApplyEdit.resx">
+      <DependentUpon>FrmRepairApplyEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmRepairDelegateEdit.resx">
+      <DependentUpon>FrmRepairDelegateEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmRepairDuoAudit.resx">
+      <DependentUpon>FrmRepairDuoAudit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmRepairHistory.resx">
+      <DependentUpon>FrmRepairHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmCompleteEditRemark.resx">
+      <DependentUpon>FrmCompleteEditRemark.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseInfo\BaseInfo.csproj">
+      <Project>{71F49CE3-707D-409D-9796-48743BE13003}</Project>
+      <Name>BaseInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</Project>
+      <Name>CommonOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonViewer\CommonViewer.csproj">
+      <Project>{0AEB1FBC-6588-4EF9-8A44-A87597E71822}</Project>
+      <Name>CommonViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cost\Cost.csproj">
+      <Project>{A5A38561-8A4D-41D3-91ED-AB66F2501A84}</Project>
+      <Name>Cost</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperationBase\FileOperationBase.csproj">
+      <Project>{E7C6132D-8312-4579-A384-2FCDB6C64E8C}</Project>
+      <Name>FileOperationBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperation\FileOperation.csproj">
+      <Project>{507F1A26-A810-448D-B49B-97D68D7B6EAC}</Project>
+      <Name>FileOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemsManage\ItemsManage.csproj">
+      <Project>{982FE57C-67B8-49E3-B7D0-A31B869C7584}</Project>
+      <Name>ItemsManage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Maintenance\Maintenance.csproj">
+      <Project>{4B1A8C51-9639-4461-BC21-0CA009C4585D}</Project>
+      <Name>Maintenance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StorageManage\StorageManage.csproj">
+      <Project>{25AD1C38-D42C-4061-88D9-CECB92F36B9C}</Project>
+      <Name>StorageManage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

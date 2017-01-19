@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25AD1C38-D42C-4061-88D9-CECB92F36B9C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StorageManage</RootNamespace>
+    <AssemblyName>StorageManage</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/StorageManage/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alert\MaterialApplyAlert.cs" />
+    <Compile Include="Alert\MaterialApplyAlertOnce.cs" />
+    <Compile Include="Alert\MaterialInAlertOnce.cs" />
+    <Compile Include="Alert\MaterialOrderAlert.cs" />
+    <Compile Include="Alert\MaterialInAlert.cs" />
+    <Compile Include="Alert\MaterialOrderAlertOnce.cs" />
+    <Compile Include="Alert\MaterialOutAlert.cs" />
+    <Compile Include="Alert\MaterielStockckAlert.cs" />
+    <Compile Include="Alert\SpareApplyAlert.cs" />
+    <Compile Include="Alert\SpareApplyAlertOnce.cs" />
+    <Compile Include="Alert\SpareInAlert.cs" />
+    <Compile Include="Alert\SpareInAlertOnce.cs" />
+    <Compile Include="Alert\SpareNotVoucherAlert.cs" />
+    <Compile Include="Alert\SpareOrderAlert.cs" />
+    <Compile Include="Alert\SpareOrderAlertOnce.cs" />
+    <Compile Include="Alert\SpareOutAlert.cs" />
+    <Compile Include="Alert\SpareStockckAlert.cs" />
+    <Compile Include="Alert\SpareStockLowerAlert.cs" />
+    <Compile Include="Alert\MaterialNotVoucherAlert.cs" />
+    <Compile Include="DataObject\MaterialDepotCheck.cs" />
+    <Compile Include="DataObject\MaterialDepotOperation.cs" />
+    <Compile Include="DataObject\MaterialPurchaseApply.cs" />
+    <Compile Include="DataObject\MaterialPurchaseApplyDetail.cs" />
+    <Compile Include="DataObject\MaterialPurchaseOrder.cs" />
+    <Compile Include="DataObject\MaterialPurchaseOrderDetail.cs" />
+    <Compile Include="DataObject\SpareDepotCheck.cs" />
+    <Compile Include="DataObject\SpareDepotOperation.cs" />
+    <Compile Include="DataObject\SparePurchaseApply.cs" />
+    <Compile Include="DataObject\SparePurchaseApplyDetail.cs" />
+    <Compile Include="DataObject\SparePurchaseOrder.cs" />
+    <Compile Include="DataObject\SparePurchaseOrderDetail.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\MaterialDepotCheckService.cs" />
+    <Compile Include="Services\MaterialDepotOperationService.cs" />
+    <Compile Include="Services\MaterialPurchaseApplyDetailService.cs" />
+    <Compile Include="Services\MaterialPurchaseApplyDetailServiceEx.cs" />
+    <Compile Include="Services\MaterialPurchaseApplyService.cs" />
+    <Compile Include="Services\MaterialPurchaseApplyServiceEx.cs" />
+    <Compile Include="Services\MaterialPurchaseOrderDetailService.cs" />
+    <Compile Include="Services\MaterialPurchaseOrderDetailServiceEx.cs" />
+    <Compile Include="Services\MaterialPurchaseOrderService.cs" />
+    <Compile Include="Services\MaterialPurchaseOrderServiceEx.cs" />
+    <Compile Include="Services\SAPServiceOfSpareAndMaterial.cs" />
+    <Compile Include="Services\SpareDepotCheckService.cs" />
+    <Compile Include="Services\SpareDepotOperationService.cs" />
+    <Compile Include="Services\SparePurchaseApplyDetailService.cs" />
+    <Compile Include="Services\SparePurchaseApplyDetailServiceEx.cs" />
+    <Compile Include="Services\SparePurchaseApplyService.cs" />
+    <Compile Include="Services\SparePurchaseApplyServiceEx.cs" />
+    <Compile Include="Services\SparePurchaseOrderDetailService.cs" />
+    <Compile Include="Services\SparePurchaseOrderDetailServiceEx.cs" />
+    <Compile Include="Services\SparePurchaseOrderService.cs" />
+    <Compile Include="Services\SparePurchaseOrderServiceEx.cs" />
+    <Compile Include="Services\SpareStockService.cs" />
+    <Compile Include="Services\StorageCommonService.cs" />
+    <Compile Include="Services\MaterialStockService.cs" />
+    <Compile Include="StorageConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Viewer\FrmMaterialApplySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialApplySelect.Designer.cs">
+      <DependentUpon>FrmMaterialApplySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseApply.designer.cs">
+      <DependentUpon>FrmMaterialPurchaseApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseApplyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseApplyEdit.designer.cs">
+      <DependentUpon>FrmMaterialPurchaseApplyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseApplySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseApplySelect.designer.cs">
+      <DependentUpon>FrmMaterialPurchaseApplySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseOrder.designer.cs">
+      <DependentUpon>FrmMaterialPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseOrderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseOrderEdit.designer.cs">
+      <DependentUpon>FrmMaterialPurchaseOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseOrderSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialPurchaseOrderSelect.designer.cs">
+      <DependentUpon>FrmMaterialPurchaseOrderSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialVoucher.designer.cs">
+      <DependentUpon>FrmMaterialVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareApplySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareApplySelect.Designer.cs">
+      <DependentUpon>FrmSpareApplySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareVoucher.Designer.cs">
+      <DependentUpon>FrmSpareVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareMonthInReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareMonthInReport.designer.cs">
+      <DependentUpon>FrmSpareMonthInReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareMonthOutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareMonthOutReport.designer.cs">
+      <DependentUpon>FrmSpareMonthOutReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareIn.Designer.cs">
+      <DependentUpon>FrmSpareIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareInEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareInEdit.Designer.cs">
+      <DependentUpon>FrmSpareInEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareOperation.designer.cs">
+      <DependentUpon>FrmSpareOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseApply.designer.cs">
+      <DependentUpon>FrmSparePurchaseApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseApplyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseApplyEdit.designer.cs">
+      <DependentUpon>FrmSparePurchaseApplyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseApplySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseApplySelect.designer.cs">
+      <DependentUpon>FrmSparePurchaseApplySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseOrder.designer.cs">
+      <DependentUpon>FrmSparePurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseOrderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseOrderEdit.designer.cs">
+      <DependentUpon>FrmSparePurchaseOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseOrderSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSparePurchaseOrderSelect.designer.cs">
+      <DependentUpon>FrmSparePurchaseOrderSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareStockInit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareStockInit.Designer.cs">
+      <DependentUpon>FrmSpareStockInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareStockCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareStockCheck.Designer.cs">
+      <DependentUpon>FrmSpareStockCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareStockCheckEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareStockCheckEdit.Designer.cs">
+      <DependentUpon>FrmSpareStockCheckEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareInShipInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareInShipInfo.designer.cs">
+      <DependentUpon>FrmSpareInShipInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareOut.Designer.cs">
+      <DependentUpon>FrmSpareOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareOutEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSpareOutEdit.Designer.cs">
+      <DependentUpon>FrmSpareOutEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialIn.Designer.cs">
+      <DependentUpon>FrmMaterialIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialInEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialInEdit.Designer.cs">
+      <DependentUpon>FrmMaterialInEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialMonthInReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialMonthInReport.designer.cs">
+      <DependentUpon>FrmMaterialMonthInReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialMonthOutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialMonthOutReport.designer.cs">
+      <DependentUpon>FrmMaterialMonthOutReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialOperation.designer.cs">
+      <DependentUpon>FrmMaterialOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialOut.Designer.cs">
+      <DependentUpon>FrmMaterialOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialOutEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialOutEdit.Designer.cs">
+      <DependentUpon>FrmMaterialOutEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialStockInit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialStockInit.Designer.cs">
+      <DependentUpon>FrmMaterialStockInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialStockCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialStockCheck.Designer.cs">
+      <DependentUpon>FrmMaterialStockCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialStockCheckEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmMaterialStockCheckEdit.Designer.cs">
+      <DependentUpon>FrmMaterialStockCheckEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectSpareFromStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectSpareFromStock.designer.cs">
+      <DependentUpon>FrmSelectSpareFromStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectMaterialFromStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\FrmSelectMaterialFromStock.designer.cs">
+      <DependentUpon>FrmSelectMaterialFromStock.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseInfo\BaseInfo.csproj">
+      <Project>{71F49CE3-707D-409D-9796-48743BE13003}</Project>
+      <Name>BaseInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonOperation\CommonOperation.csproj">
+      <Project>{EE9387AF-7AED-494C-B8D0-49B1C89132A6}</Project>
+      <Name>CommonOperation</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonViewer\CommonViewer.csproj">
+      <Project>{0AEB1FBC-6588-4EF9-8A44-A87597E71822}</Project>
+      <Name>CommonViewer</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Cost\Cost.csproj">
+      <Project>{A5A38561-8A4D-41D3-91ED-AB66F2501A84}</Project>
+      <Name>Cost</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperationBase\FileOperationBase.csproj">
+      <Project>{E7C6132D-8312-4579-A384-2FCDB6C64E8C}</Project>
+      <Name>FileOperationBase</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FileOperation\FileOperation.csproj">
+      <Project>{507F1A26-A810-448D-B49B-97D68D7B6EAC}</Project>
+      <Name>FileOperation</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemsManage\ItemsManage.csproj">
+      <Project>{982FE57C-67B8-49E3-B7D0-A31B869C7584}</Project>
+      <Name>ItemsManage</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ShipMisZHJ_WorkFlow\ShipMisZHJ_WorkFlow.csproj">
+      <Project>{b6804ea3-6f81-402d-8b27-42c2365345c8}</Project>
+      <Name>ShipMisZHJ_WorkFlow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialApplySelect.resx">
+      <DependentUpon>FrmMaterialApplySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialPurchaseApply.resx">
+      <DependentUpon>FrmMaterialPurchaseApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialPurchaseApplyEdit.resx">
+      <DependentUpon>FrmMaterialPurchaseApplyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialPurchaseApplySelect.resx">
+      <DependentUpon>FrmMaterialPurchaseApplySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialPurchaseOrder.resx">
+      <DependentUpon>FrmMaterialPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialPurchaseOrderEdit.resx">
+      <DependentUpon>FrmMaterialPurchaseOrderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialPurchaseOrderSelect.resx">
+      <DependentUpon>FrmMaterialPurchaseOrderSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialVoucher.resx">
+      <DependentUpon>FrmMaterialVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareApplySelect.resx">
+      <DependentUpon>FrmSpareApplySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareVoucher.resx">
+      <DependentUpon>FrmSpareVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareMonthInReport.resx">
+      <DependentUpon>FrmSpareMonthInReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareMonthOutReport.resx">
+      <DependentUpon>FrmSpareMonthOutReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareIn.resx">
+      <DependentUpon>FrmSpareIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareInEdit.resx">
+      <DependentUpon>FrmSpareInEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareOperation.resx">
+      <DependentUpon>FrmSpareOperation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSparePurchaseApply.resx">
+      <DependentUpon>FrmSparePurchaseApply.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSparePurchaseApplyEdit.resx">
+      <DependentUpon>FrmSparePurchaseApplyEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSparePurchaseApplySelect.resx">
+      <DependentUpon>FrmSparePurchaseApplySelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSparePurchaseOrder.resx">
+      <DependentUpon>FrmSparePurchaseOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSparePurchaseOrderEdit.resx">
+      <DependentUpon>FrmSparePurchaseOrderEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSparePurchaseOrderSelect.resx">
+      <DependentUpon>FrmSparePurchaseOrderSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareStockInit.resx">
+      <DependentUpon>FrmSpareStockInit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareStockCheck.resx">
+      <DependentUpon>FrmSpareStockCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareStockCheckEdit.resx">
+      <DependentUpon>FrmSpareStockCheckEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareInShipInfo.resx">
+      <DependentUpon>FrmSpareInShipInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareOut.resx">
+      <DependentUpon>FrmSpareOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSpareOutEdit.resx">
+      <DependentUpon>FrmSpareOutEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialIn.resx">
+      <DependentUpon>FrmMaterialIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialInEdit.resx">
+      <DependentUpon>FrmMaterialInEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialMonthInReport.resx">
+      <DependentUpon>FrmMaterialMonthInReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialMonthOutReport.resx">
+      <DependentUpon>FrmMaterialMonthOutReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialOperation.resx">
+      <DependentUpon>FrmMaterialOperation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialOut.resx">
+      <DependentUpon>FrmMaterialOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialOutEdit.resx">
+      <DependentUpon>FrmMaterialOutEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialStockInit.resx">
+      <DependentUpon>FrmMaterialStockInit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialStockCheck.resx">
+      <DependentUpon>FrmMaterialStockCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmMaterialStockCheckEdit.resx">
+      <DependentUpon>FrmMaterialStockCheckEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSelectSpareFromStock.resx">
+      <DependentUpon>FrmSelectSpareFromStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FrmSelectMaterialFromStock.resx">
+      <DependentUpon>FrmSelectMaterialFromStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

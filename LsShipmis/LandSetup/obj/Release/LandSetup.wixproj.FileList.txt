@@ -1,0 +1,6 @@
+obj\Release\Product.wixobj
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\LandSetup\bin\Release\LandSetup.msi
+D:\代码\C#\VSS\上海海丰\04源代码\上海海丰\LsShipmis\LandSetup\bin\Release\LandSetup.wixpdb
+obj\Release\LandSetup.wixproj.BindContentsFileListzh-cn.txt
+obj\Release\LandSetup.wixproj.BindOutputsFileListzh-cn.txt
+obj\Release\LandSetup.wixproj.BindBuiltOutputsFileListzh-cn.txt
